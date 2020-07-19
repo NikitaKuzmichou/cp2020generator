@@ -1,6 +1,25 @@
 <nav>
-  <div class="text-right">
-    <a class="btn btn-primary"></a>
+  <div class="row bg-primary text-white">
+    <div class="col">
+        <a class="btn btn-success">{{ navLocal.getCharacter() }}</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-success">{{ navLocal.getImplants() }}</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-success">{{ navLocal.getWeapon() }}</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-success">{{ navLocal.getNpc() }}</a>
+    </div>
+    <div class="col">
+      <div class="text-right">
+        <select [(ngModel)]="appService.language" (change)="setLocalization()">
+          <option [ngValue]="getEnglishLang()">English</option>
+          <option [ngValue]="getRuLang()">Русский</option>
+        </select>
+      </div>
+    </div>
   </div>
 </nav>
 <router-outlet></router-outlet>

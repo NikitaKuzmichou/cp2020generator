@@ -1,14 +1,14 @@
-import { LocalizationFactoryRu } from './localization.factory.ru';
-import { LocalizationFactoryEn } from './localization.factory.en';
+import { NavLocalizationFactoryEn } from './localization.factory.en';
+import { NavLocalizationFactoryRu } from './localization.factory.ru';
 import { AppLanguage } from 'src/app/app.language';
 
-export class LocalizationFactory {
-  getLocalization(language: AppLanguage) {
+export class NavLocalizationFactory {
+  static getLocalization(language: AppLanguage) {
     switch (language) {
       case AppLanguage.RUSSIAN:
-        return LocalizationFactoryRu.getLocalization();
+        return NavLocalizationFactoryRu.getLocalization();
       case AppLanguage.ENGLISH:
-        return LocalizationFactoryEn.getLocalization();
+        return NavLocalizationFactoryEn.getLocalization();
     }
   }
 }
