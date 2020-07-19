@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.navLocal = NavLocalizationFactory.getLocalization(this.appService.getLanguage());
+    this.setLocalization();
   }
 
   getEnglishLang() {
