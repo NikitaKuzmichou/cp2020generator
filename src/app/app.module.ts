@@ -11,14 +11,18 @@ import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 
 import { BackgroundComponent } from './character/background/background.component';
+import { CharacterComponent } from './character/character.component';
 import { InProgressComponent } from './tmp/in-progress/in-progress.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundComponent,
 
     InProgressComponent,
+
+    BackgroundComponent,
+    CharacterComponent,
+
   ],
   imports: [
     BrowserModule,

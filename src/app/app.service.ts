@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {AppLanguage} from './app.language';
+import { Injectable } from '@angular/core';
+import { AppLanguage } from './app.language';
 
 @Injectable()
 export class AppService {

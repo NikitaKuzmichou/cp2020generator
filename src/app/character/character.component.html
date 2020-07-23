@@ -1,0 +1,16 @@
+<div class="card-header h2">
+  <!--header name-->
+</div>
+<div class="options ">
+  <span *ngIf="isShowOptions(); then showOptions else hideOptions"></span>
+  <ng-template #showOptions>
+    <ul>
+      <!-- options here -->
+    </ul>
+  </ng-template>
+  <ng-template #hideOptions>
+    <div class="text-center h3">
+      <button (click)="changeOptionsState()"><!--show generate options--></button>
+    </div>
+  </ng-template>
+</div>
