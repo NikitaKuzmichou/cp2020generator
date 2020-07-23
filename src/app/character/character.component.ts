@@ -28,6 +28,7 @@ export class CharacterComponent implements OnInit {
     this.showOptions = !this.showOptions;
   }
 
+  /**TODO*/
   changeLocalization() {
     this.localization = CharacterLocalizationFactory.getLocalization(this.appService.getLanguage());
   }
