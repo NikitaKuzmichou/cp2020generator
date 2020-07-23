@@ -1,4 +1,4 @@
-import { NavLocalizationRu } from 'src/app/localization/nav/nav.localization.ru';
+import { NavLocalizationRu } from 'src/app/localization/nav/nav.ru';
 
 export class NavLocalizationFactoryRu {
   static getLocalization() {

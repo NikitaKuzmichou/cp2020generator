@@ -4,14 +4,14 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
-import {BackgroundComponent} from './character/background/background.component';
+import { CharacterComponent } from './character/character.component';
 
-import {InProgressComponent} from './tmp/in-progress/in-progress.component';
+import { InProgressComponent } from './tmp/in-progress/in-progress.component';
 
 const routes: Routes = [
   { path: 'index', component: AppComponent },
 
-  { path: 'background', component: BackgroundComponent},
+  { path: 'character', component: CharacterComponent},
   { path: 'in-progress', component: InProgressComponent}
 ];
 

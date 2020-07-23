@@ -1,4 +1,4 @@
-import { NavLocalizationEn } from 'src/app/localization/nav/nav.localization.en';
+import { NavLocalizationEn } from 'src/app/localization/nav/nav.en';
 
 export class NavLocalizationFactoryEn {
   static getLocalization() {

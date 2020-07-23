@@ -1,7 +1,7 @@
 <nav>
   <div class="row bg-primary text-white">
     <div class="col">
-      <a routerLink="/background"
+      <a routerLink="/character"
         class="btn btn-success">{{ navLocal.getCharacter() }}</a>
     </div>
     <div class="col">
@@ -19,8 +19,8 @@
     <div class="col">
       <div class="text-right">
         <select [(ngModel)]="appService.language" (change)="setLocalization()">
-          <option [ngValue]="getEnglishLang()">English</option>
-          <option [ngValue]="getRuLang()">Русский</option>
+          <option [ngValue]="getEnglishLang()">{{getEnglishLang()}}</option>
+          <option [ngValue]="getRuLang()">{{getRuLang()}}</option>
         </select>
       </div>
     </div>

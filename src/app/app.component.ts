@@ -3,8 +3,8 @@ import {Component, OnInit} from '@angular/core';
 import {AppService} from './app.service';
 import {AppLanguage} from './app.language';
 
-import {NavLocalization} from './localization/nav/nav.localization';
-import {NavLocalizationFactory} from './factories/localization/nav/localization.factory';
+import {NavLocalization} from './localization/nav/nav';
+import {NavLocalizationFactory} from './factories/localization/nav/nav';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   title = 'cyberpunk 2020 character generator';
   navLocal: NavLocalization;
 
-  constructor(private appService: AppService) {
+  constructor(public appService: AppService) {
   }
 
   ngOnInit() {

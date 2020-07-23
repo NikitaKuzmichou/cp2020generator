@@ -1,5 +1,5 @@
 <div class="card-header h2">
-  <!--header name-->
+  {{localization.getHeader()}}
 </div>
 <div class="options ">
   <span *ngIf="isShowOptions(); then showOptions else hideOptions"></span>
@@ -10,7 +10,7 @@
   </ng-template>
   <ng-template #hideOptions>
     <div class="text-center h3">
-      <button (click)="changeOptionsState()"><!--show generate options--></button>
+      <button (click)="changeOptionsState()">{{localization.getShowOptions()}}</button>
     </div>
   </ng-template>
 </div>

@@ -1,4 +1,5 @@
-import { NavLocalization } from './nav.localization';
+import { NavLocalization } from './nav';
+import { AppLanguage } from '../../app.language';
 
 export class NavLocalizationEn implements NavLocalization {
   getCharacter() {
@@ -18,6 +19,6 @@ export class NavLocalizationEn implements NavLocalization {
   }
 
   getLanguage() {
-    return 'english';
+    return AppLanguage.ENGLISH;
   }
 }
