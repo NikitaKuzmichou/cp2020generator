@@ -1,7 +1,7 @@
 import { CharacterLocalization } from './character';
 import { AppLanguage } from '../../app.language';
 
-export class CharacterLocalizationEn implements CharacterLocalization{
+export class CharacterLocalizationEn implements CharacterLocalization {
   getAge() {
     return 'Age';
   }
