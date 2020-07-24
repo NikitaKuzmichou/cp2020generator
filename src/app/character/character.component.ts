@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
@@ -17,19 +17,14 @@ export class CharacterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.changeLocalization();
+    this.localization = CharacterLocalizationFactory.getLocalization(this.appService.getLanguage());
   }
 
-  isShowOptions() {
+  onShowOptions() {
     return this.showOptions;
   }
 
   changeOptionsState() {
     this.showOptions = !this.showOptions;
-  }
-
-  /**TODO*/
-  changeLocalization() {
-    this.localization = CharacterLocalizationFactory.getLocalization(this.appService.getLanguage());
   }
 }

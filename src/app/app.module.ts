@@ -33,7 +33,7 @@ import { InProgressComponent } from './tmp/in-progress/in-progress.component';
     CommonModule
   ],
   providers: [
-    { provide: AppService, deps: [] }
+    AppService,
   ],
   bootstrap: [AppComponent]
 })

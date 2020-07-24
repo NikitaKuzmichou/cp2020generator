@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AppLanguage } from './app.language';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+  })
 export class AppService {
 
   language = AppLanguage.ENGLISH;

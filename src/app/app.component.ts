@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
-import {AppService} from './app.service';
-import {AppLanguage} from './app.language';
+import { AppService } from './app.service';
+import { AppLanguage } from './app.language';
 
-import {NavLocalization} from './localization/nav/nav';
-import {NavLocalizationFactory} from './factories/localization/nav/nav';
+import { NavLocalization } from './localization/nav/nav';
+import { NavLocalizationFactory } from './factories/localization/nav/nav';
 
 @Component({
   selector: 'app-root',

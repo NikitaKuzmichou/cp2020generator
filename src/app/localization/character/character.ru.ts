@@ -1,7 +1,6 @@
 import { CharacterLocalization } from './character';
 import { AppLanguage } from '../../app.language';
 
-/**TODO*/
 export class CharacterLocalizationRu implements CharacterLocalization {
   getGenerateBtn() {
     return 'Сгенерировать';
@@ -12,7 +11,7 @@ export class CharacterLocalizationRu implements CharacterLocalization {
   }
 
   getBackground() {
-    return '';
+    return 'Предыстория персонажа';
   }
 
   getCharacteristics() {
@@ -20,11 +19,11 @@ export class CharacterLocalizationRu implements CharacterLocalization {
   }
 
   getEthnic() {
-    return '';
+    return 'Этническое происхождение';
   }
 
   getFamily() {
-    return '';
+    return 'Предыстория семьи';
   }
 
   getShowOptions() {
@@ -40,26 +39,30 @@ export class CharacterLocalizationRu implements CharacterLocalization {
   }
 
   getLifeEvents() {
-    return '';
+    return 'Жизненные события';
   }
 
   getMotivation() {
-    return '';
+    return 'Мотивация';
   }
 
   getName() {
-    return '';
+    return 'Имя';
   }
 
   getRandomAge() {
-    return '';
+    return 'Случайный возраст';
   }
 
   getSkills() {
-    return '';
+    return 'Умения';
   }
 
   getPersonalStyle() {
-    return '';
+    return 'Одежда и личный стиль';
+  }
+
+  getHideOptions() {
+    return 'Скрыть опции';
   }
 }

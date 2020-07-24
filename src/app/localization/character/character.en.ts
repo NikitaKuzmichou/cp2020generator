@@ -1,14 +1,13 @@
 import { CharacterLocalization } from './character';
 import { AppLanguage } from '../../app.language';
 
-/**TODO*/
 export class CharacterLocalizationEn implements CharacterLocalization{
   getAge() {
     return 'Age';
   }
 
   getBackground() {
-    return '';
+    return 'Character background';
   }
 
   getCharacteristics() {
@@ -61,5 +60,9 @@ export class CharacterLocalizationEn implements CharacterLocalization{
 
   getGenerateBtn() {
     return 'Generate';
+  }
+
+  getHideOptions() {
+    return 'Hide options';
   }
 }

@@ -1,6 +1,6 @@
 import { Localization } from '../localization';
 
-export interface CharacterLocalization extends Localization{
+export interface CharacterLocalization extends Localization {
   getHeader();
   getShowOptions();
   getName();
@@ -15,4 +15,5 @@ export interface CharacterLocalization extends Localization{
   getAge();
   getSkills();
   getGenerateBtn();
+  getHideOptions();
 }
