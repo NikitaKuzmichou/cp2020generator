@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
+import { GenerationOptions } from './generation.options';
 
 @Component({
   selector: 'app-character',
@@ -11,9 +12,9 @@ import { CharacterLocalization } from '../localization/character/character';
 export class CharacterComponent implements OnInit {
   private showOptions = false;
   localization: CharacterLocalization;
+  options: GenerationOptions;
 
-  constructor(private appService: AppService) {
-  }
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {
     this.updateLocalization();
