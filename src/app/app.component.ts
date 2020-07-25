@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
-import { AppService } from './app.service';
-import { AppLanguage } from './app.language';
+import {AppService} from './app.service';
+import {AppLanguage} from './app.language';
 
-import { NavLocalization } from './localization/nav/nav';
-import { NavLocalizationFactory } from './factories/localization/nav/nav';
+import {NavLocalization} from './localization/nav/nav';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setLocalization();
+    this.setLocalization(AppLanguage.ENGLISH);
   }
 
   getEnglishLang() {
@@ -30,7 +29,8 @@ export class AppComponent implements OnInit {
     return AppLanguage.RUSSIAN;
   }
 
-  setLocalization() {
-    this.navLocal = NavLocalizationFactory.getLocalization(this.appService.getLanguage());
+  setLocalization(language: AppLanguage) {
+    this.appService.setLanguage(language);
+    this.navLocal = this.appService.getLocalization().getNavLocalization();
   }
 }

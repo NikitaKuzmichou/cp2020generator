@@ -18,7 +18,7 @@
     </div>
     <div class="col">
       <div class="text-right">
-        <select [(ngModel)]="appService.language" (change)="setLocalization()">
+        <select (change)="setLocalization($event.target.value)">
           <option [ngValue]="getEnglishLang()">{{getEnglishLang()}}</option>
           <option [ngValue]="getRuLang()">{{getRuLang()}}</option>
         </select>

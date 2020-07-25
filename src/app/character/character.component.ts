@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
-import { CharacterLocalizationFactory } from '../factories/localization/character/character';
 
 @Component({
   selector: 'app-character',
@@ -17,7 +16,7 @@ export class CharacterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.localization = CharacterLocalizationFactory.getLocalization(this.appService.getLanguage());
+    this.updateLocalization();
   }
 
   onShowOptions() {
@@ -26,5 +25,13 @@ export class CharacterComponent implements OnInit {
 
   changeOptionsState() {
     this.showOptions = !this.showOptions;
+  }
+
+  languageChanged() {
+    return this.appService.getLanguage() !== this.localization.getLanguage();
+  }
+
+  updateLocalization() {
+    this.localization = this.appService.getLocalization().getCharacterLocalization();
   }
 }
