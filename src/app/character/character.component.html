@@ -6,13 +6,14 @@
   <span *ngIf="onShowOptions(); then showOptions else hideOptions"></span>
   <ng-template #showOptions>
     <ul>
+      <li></li>
       <!-- options here -->
-      <div class="text-right">
-        <button (click)="changeOptionsState()" class="btn-primary">
-          {{localization.getHideOptions()}}
-        </button>
-      </div>
     </ul>
+    <div class="text-right">
+      <button (click)="changeOptionsState()" class="btn-primary">
+        {{localization.getHideOptions()}}
+      </button>
+    </div>
   </ng-template>
   <ng-template #hideOptions>
     <div class="text-center h3">

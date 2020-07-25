@@ -10,9 +10,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 
+import { InProgressComponent } from './tmp/in-progress/in-progress.component';
+/**character components*/
+import { NameComponent } from './character/name/name.component';
+import { CharacteristicsComponent } from './character/characteristics/characteristics.component';
+import { SkillsComponent } from './character/skills/skills.component';
+/**background*/
 import { BackgroundComponent } from './character/background/background.component';
 import { CharacterComponent } from './character/character.component';
-import { InProgressComponent } from './tmp/in-progress/in-progress.component';
+import { DressComponent } from './character/background/dress/dress.component';
+import { EthnicComponent } from './character/background/ethnic/ethnic.component';
+import { MotivationComponent } from './character/background/motivation/motivation.component';
+import { FamilyComponent } from './character/background/family/family.component';
+import { EventsComponent } from './character/background/events/events.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +30,16 @@ import { InProgressComponent } from './tmp/in-progress/in-progress.component';
 
     InProgressComponent,
 
+    NameComponent,
+    CharacteristicsComponent,
+    SkillsComponent,
     BackgroundComponent,
     CharacterComponent,
+    DressComponent,
+    EthnicComponent,
+    MotivationComponent,
+    FamilyComponent,
+    EventsComponent,
 
   ],
   imports: [

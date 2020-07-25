@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./background.component.css']
 })
 export class BackgroundComponent implements OnInit {
-
+  /**TODO*/
   constructor() { }
 
   ngOnInit(): void {
