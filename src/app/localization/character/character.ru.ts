@@ -6,6 +6,10 @@ export class CharacterLocalizationRu implements CharacterLocalization {
     return 'Сгенерировать';
   }
 
+  getOptionsHeader() {
+    return 'Выберите опции для генерации';
+  }
+
   getAge() {
     return 'Возраст';
   }
@@ -60,6 +64,14 @@ export class CharacterLocalizationRu implements CharacterLocalization {
 
   getPersonalStyle() {
     return 'Одежда и личный стиль';
+  }
+
+  getDetailedGeneration() {
+    return 'Подробная генерация ваших друзей или врагов';
+  }
+
+  getNothingHappened() {
+    return 'Предотвратить события "Ничего не случилось в этом году"';
   }
 
   getHideOptions() {

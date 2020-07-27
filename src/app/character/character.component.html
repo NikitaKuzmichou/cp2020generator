@@ -1,13 +1,62 @@
-<span *ngIf="languageChanged() then updateLocalization()"></span>
+<span *ngIf="isLanguageChanged() then updateLocalization()"></span>
 <div class="card-header h2">
   {{localization.getHeader()}}
 </div>
 <div class="options ">
   <span *ngIf="onShowOptions(); then showOptions else hideOptions"></span>
   <ng-template #showOptions>
-    <ul>
-      <li></li>
-      <!-- options here -->
+    <div class="options-header h3 text-center">{{localization.getOptionsHeader()}}</div>
+    <ul class="list-group text-center">
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.nameOptions.selected" disabled>
+          {{localization.getName()}}
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.characteristicOptions.selected">
+          {{localization.getCharacteristics()}}
+      </li>
+      <!--Don't like it. REDO AS A CARD-->
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.backgroundOptions.ethnic">
+        {{localization.getEthnic()}}
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.backgroundOptions.family">
+        {{localization.getFamily()}}
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.backgroundOptions.dress">
+        {{localization.getPersonalStyle()}}
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.backgroundOptions.motivation">
+        {{localization.getMotivation()}}
+      </li>
+      <li class="list-group-item">
+        <div class="bg-info text-white">{{localization.getLifeEvents()}}</div>
+        <div>
+          <input type="checkbox" [(ngModel)]="options.backgroundOptions.events.detailedGeneration">
+          {{localization.getDetailedGeneration()}}
+        </div>
+        <div>
+          <input type="checkbox" [(ngModel)]="options.backgroundOptions.events.nothingHappenedEvents">
+          {{localization.getNothingHappened()}}
+        </div>
+        <div>
+          <input type="checkbox" [(ngModel)]="options.backgroundOptions.events.randomAge">
+          {{localization.getRandomAge()}}
+          <div [hidden]="options.backgroundOptions.events.randomAge">
+            <input type="number" [min]="16" [max]="74"
+                   [(ngModel)]="options.backgroundOptions.events.age"
+                   (keyup)="checkInputAge($event)">
+            {{localization.getAge()}}
+          </div>
+        </div>
+      </li>
+      <!--***********-->
+      <li class="list-group-item">
+        <input type="checkbox" [(ngModel)]="options.skillsOptions.selected" disabled>
+          {{localization.getSkills()}}</li>
     </ul>
     <div class="text-right">
       <button (click)="changeOptionsState()" class="btn-primary">
@@ -21,4 +70,14 @@
         {{localization.getShowOptions()}}</button>
     </div>
   </ng-template>
+</div>
+
+<app-characteristics></app-characteristics>
+
+<app-background></app-background>
+
+<div class="text-right">
+  <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">
+    {{localization.getGenerateBtn()}}
+  </button>
 </div>

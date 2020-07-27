@@ -10,7 +10,7 @@ import { GenerationOptions } from './generation.options';
   styleUrls: ['./character.component.css']
 })
 export class CharacterComponent implements OnInit {
-  private showOptions = false;
+  private showOptions: boolean;
   localization: CharacterLocalization;
   options: GenerationOptions;
 
@@ -18,6 +18,12 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateLocalization();
+    this.options = new GenerationOptions();
+    this.showOptions = true;
+  }
+
+  updateLocalization() {
+    this.localization = this.appService.getLocalization().getCharacterLocalization();
   }
 
   onShowOptions() {
@@ -28,11 +34,23 @@ export class CharacterComponent implements OnInit {
     this.showOptions = !this.showOptions;
   }
 
-  languageChanged() {
-    return this.appService.getLanguage() !== this.localization.getLanguage();
+  hasActiveOption() {
+    return this.options.hasActiveOption();
   }
 
-  updateLocalization() {
-    this.localization = this.appService.getLocalization().getCharacterLocalization();
+  checkInputAge(event) {
+    if (event.path[0].value < 16) {
+      event.path[0].value = 16;
+    } else if (event.path[0].value > 74) {
+      event.path[0].value = 74;
+    }
+  }
+
+  generateInfo() {
+    /**TODO*/
+  }
+
+  isLanguageChanged() {
+    return this.appService.getLanguage() !== this.localization.getLanguage();
   }
 }

@@ -1,4 +1,7 @@
 export class SkillsOptions {
   /**TODO*/
-  generate: boolean;
+  selected: boolean;
+  constructor() {
+    this.selected = false;
+  }
 }

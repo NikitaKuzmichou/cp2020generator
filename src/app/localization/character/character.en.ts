@@ -6,6 +6,10 @@ export class CharacterLocalizationEn implements CharacterLocalization {
     return 'Age';
   }
 
+  getOptionsHeader() {
+    return 'Choose options for generation';
+  }
+
   getBackground() {
     return 'Character background';
   }
@@ -56,6 +60,14 @@ export class CharacterLocalizationEn implements CharacterLocalization {
 
   getPersonalStyle() {
     return 'Dress and personal style';
+  }
+
+  getDetailedGeneration() {
+    return 'Detailed generation of your friends or enemies';
+  }
+
+  getNothingHappened() {
+    return 'Prevent "Nothing happened that year" events';
   }
 
   getGenerateBtn() {
