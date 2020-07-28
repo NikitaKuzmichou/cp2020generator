@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
 import { GenerationOptions } from './generation.options';
+import { CharacteristicsComponent } from './characteristics/characteristics.component';
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  styleUrls: ['./character.component.css'],
 })
 export class CharacterComponent implements OnInit {
   private showOptions: boolean;
+  @ViewChild(CharacteristicsComponent)
+  private characteristics: CharacteristicsComponent;
   localization: CharacterLocalization;
   options: GenerationOptions;
 
@@ -48,6 +51,7 @@ export class CharacterComponent implements OnInit {
 
   generateInfo() {
     /**TODO*/
+    this.characteristics.onGenerate();
   }
 
   isLanguageChanged() {

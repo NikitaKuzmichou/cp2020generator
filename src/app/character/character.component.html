@@ -72,7 +72,8 @@
   </ng-template>
 </div>
 
-<app-characteristics></app-characteristics>
+<app-characteristics [hidden]="!options.characteristicOptions.selected"
+                     [options]="options.characteristicOptions"></app-characteristics>
 
 <app-background></app-background>
 

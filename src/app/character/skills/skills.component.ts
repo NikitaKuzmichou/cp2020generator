@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CharacteristicsService } from '../characteristics/characteristics.service';
 
 @Component({
   selector: 'app-skills',

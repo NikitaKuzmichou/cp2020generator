@@ -6,6 +6,8 @@ export class LifeEventsOptions {
   age: number;
 
   constructor() {
+    /**TODO*/
+    this.selected = true;
     this.nothingHappenedEvents = false;
     this.randomAge = true;
     this.age = 16;
