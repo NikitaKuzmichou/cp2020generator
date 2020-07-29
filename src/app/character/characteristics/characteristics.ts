@@ -9,6 +9,7 @@ export class Characteristics {
   body: number;
   emp: number;
   carry: number;
+  lift: number;
   run: number;
   leap: number;
   humanity: number;

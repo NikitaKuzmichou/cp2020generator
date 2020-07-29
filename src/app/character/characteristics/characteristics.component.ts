@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CharacteristicsService } from './characteristics.service';
 import { CharacteristicsOptions } from './characteristics.options';
 import { Characteristics } from './characteristics';
+import {CharacteristicsLocalization} from '../../localization/character/characteristics/characteristics';
 
 @Component({
   selector: 'app-characteristics',
@@ -12,7 +13,7 @@ export class CharacteristicsComponent implements OnInit {
   private service: CharacteristicsService;
   @Input() options: CharacteristicsOptions;
   characteristics: Characteristics;
-  //localization: ;
+  @Input() localization: CharacteristicsLocalization;
 
   /**TODO*/
   constructor() { }
@@ -42,6 +43,7 @@ export class CharacteristicsComponent implements OnInit {
     this.characteristics.cool = this.service.generateCharacteristic();
     this.characteristics.btm = this.service.getBtm(this.characteristics.body);
     this.characteristics.carry = this.service.getCarry(this.characteristics.body);
+    this.characteristics.lift = this.service.getLift(this.characteristics.body);
     this.characteristics.run = this.service.getRun(this.characteristics.ma);
     this.characteristics.leap = this.service.getLeap(this.characteristics.run);
     this.characteristics.humanity = this.service.getHumanity(this.characteristics.emp);

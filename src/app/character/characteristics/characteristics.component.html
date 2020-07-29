@@ -1,56 +1,58 @@
-<div class="container skills">
-  <div class="row">
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.int}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.ref}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.tech}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.cool}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.attr}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.luck}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.ma}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.body}}</div>
-    </div>
-    <div class="col">
-      <div class="row bg-info"></div>
-      <div class="row bg-light">{{characteristics.emp}}</div>
-    </div>
+<div class="container skills text-center">
+  <div class="bg-success text-white">{{localization.getHeader()}}</div>
+  <table class="table table-borderless">
+    <tbody class="bg-light">
+      <tr>
+        <td class="bg-info text-white">{{localization.getInt()}}</td>
+        <td>{{characteristics.int}}</td>
+        <td class="bg-info text-white">{{localization.getMa()}}</td>
+        <td>{{characteristics.ma}}</td>
+        <td class="bg-info text-white">{{localization.getRun()}}</td>
+        <td>{{characteristics.run}}</td>
+      </tr>
+      <tr>
+        <td class="bg-info text-white">{{localization.getTech()}}</td>
+        <td>{{characteristics.tech}}</td>
+        <td></td>
+        <td></td>
+        <td class="bg-info text-white">{{localization.getLeap()}}</td>
+        <td>{{characteristics.leap}}</td>
+      </tr>
+      <tr>
+        <td class="bg-info text-white">{{localization.getCool()}}</td>
+        <td>{{characteristics.cool}}</td>
+        <td class="bg-info text-white">{{localization.getEmp()}}</td>
+        <td>{{characteristics.emp}}</td>
+        <td class="bg-info text-white">{{localization.getHumanity()}}</td>
+        <td>{{characteristics.humanity}}</td>
+      </tr>
+      <tr>
+        <td class="bg-info text-white">{{localization.getRef()}}</td>
+        <td>{{characteristics.ref}}</td>
+        <td class="bg-info text-white">{{localization.getBody()}}</td>
+        <td>{{characteristics.body}}</td>
+        <td class="bg-info text-white">{{localization.getBtm()}}</td>
+        <td>{{characteristics.btm}}</td>
+      </tr>
+      <tr>
+        <td class="bg-info text-white">{{localization.getAttr()}}</td>
+        <td>{{characteristics.attr}}</td>
+        <td></td>
+        <td></td>
+        <td class="bg-info text-white">{{localization.getCarry()}}</td>
+        <td>{{characteristics.carry}}</td>
+      </tr>
+      <tr>
+        <td class="bg-info text-white">{{localization.getLuck()}}</td>
+        <td>{{characteristics.luck}}</td>
+        <td></td>
+        <td></td>
+        <td class="bg-info text-white">{{localization.getLift()}}</td>
+        <td>{{characteristics.lift}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="btn btn-outline-primary" (click)="onGenerate()">
+    {{localization.getGenerate()}}
   </div>
-  <div class="row bg-transparent">
-    <div class="col"></div>
-    <div class="col">{{characteristics.run}}</div>
-    <div class="col"></div>
-    <div class="col">{{characteristics.leap}}</div>
-    <div class="col"></div>
-    <div class="col">{{characteristics.carry}}</div>
-    <div class="col"></div>
-    <div class="col">{{characteristics.humanity}}</div>
-  </div>
-  <div class="row bg-transparent">
-    <div class="col"></div>
-    <div class="col">{{characteristics.btm}}</div>
-  </div>
-
-  <div class="btn btn-outline-primary" (click)="onGenerate()">a</div>
 </div>

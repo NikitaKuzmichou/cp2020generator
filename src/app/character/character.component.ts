@@ -17,7 +17,7 @@ export class CharacterComponent implements OnInit {
   localization: CharacterLocalization;
   options: GenerationOptions;
 
-  constructor(private appService: AppService) {}
+  constructor(public appService: AppService) {}
 
   ngOnInit(): void {
     this.updateLocalization();

@@ -73,6 +73,7 @@
 </div>
 
 <app-characteristics [hidden]="!options.characteristicOptions.selected"
+                     [localization]="appService.getLocalization().getCharacteristicsLocalization()"
                      [options]="options.characteristicOptions"></app-characteristics>
 
 <app-background></app-background>

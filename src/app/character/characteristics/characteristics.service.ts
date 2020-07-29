@@ -20,6 +20,10 @@ export class CharacteristicsService {
     return body * 10;
   }
 
+  public getLift(body: number) {
+    return body * 40;
+  }
+
   public getRun(ma: number) {
     return ma * 3;
   }
