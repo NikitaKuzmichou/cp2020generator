@@ -1,6 +1,7 @@
 import { LocalizationFactory } from './localization';
 import { NavLocalizationEn } from '../../localization/nav/nav.en';
 import { CharacterLocalizationEn } from '../../localization/character/character.en';
+import { CharacteristicsLocalizationEn } from '../../localization/character/characteristics/characteristics.en';
 
 export class EnLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -9,5 +10,9 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getNavLocalization() {
     return new NavLocalizationEn();
+  }
+
+  getCharacteristicsLocalization() {
+    return new CharacteristicsLocalizationEn();
   }
 }
