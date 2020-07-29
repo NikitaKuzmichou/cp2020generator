@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CharacteristicsService } from './characteristics.service';
 import { CharacteristicsOptions } from './characteristics.options';
 import { Characteristics } from './characteristics';
-import {CharacteristicsLocalization} from '../../localization/character/characteristics/characteristics';
+import { CharacteristicsLocalization } from '../../localization/character/characteristics/characteristics';
 
 @Component({
   selector: 'app-characteristics',
@@ -12,15 +12,17 @@ import {CharacteristicsLocalization} from '../../localization/character/characte
 export class CharacteristicsComponent implements OnInit {
   private service: CharacteristicsService;
   @Input() options: CharacteristicsOptions;
-  characteristics: Characteristics;
   @Input() localization: CharacteristicsLocalization;
+  characteristics: Characteristics;
+  isGenerated: boolean;
 
   /**TODO*/
   constructor() { }
 
   ngOnInit(): void {
-    this.characteristics = new Characteristics();
     this.service = new CharacteristicsService();
+    this.isGenerated = false;
+    this.characteristics = new Characteristics();
   }
 
   onGenerate() {
@@ -32,6 +34,7 @@ export class CharacteristicsComponent implements OnInit {
   }
 
   private generateCharacteristics() {
+    this.isGenerated = true;
     this.characteristics.attr = this.service.generateCharacteristic();
     this.characteristics.body = this.service.generateCharacteristic();
     this.characteristics.tech = this.service.generateCharacteristic();

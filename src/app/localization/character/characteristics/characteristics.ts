@@ -15,6 +15,8 @@ export interface CharacteristicsLocalization extends Localization {
   getLeap();
   getCarry();
   getLift();
+  getCharacteristics();
+  getDependCharacteristics();
   getHumanity();
   getBtm();
   getGenerate();

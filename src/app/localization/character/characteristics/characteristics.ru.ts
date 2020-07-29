@@ -6,6 +6,14 @@ export class CharacteristicsLocalizationRu implements CharacteristicsLocalizatio
     return 'Привлекательность';
   }
 
+  getCharacteristics() {
+    return 'Характеристики';
+  }
+
+  getDependCharacteristics() {
+    return 'Зависит от характеристик';
+  }
+
   getBody() {
     return 'Тип телосложения';
   }

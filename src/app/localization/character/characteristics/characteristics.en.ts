@@ -6,6 +6,14 @@ export class CharacteristicsLocalizationEn implements CharacteristicsLocalizatio
     return 'Attractiveness';
   }
 
+  getCharacteristics() {
+    return 'Characteristics';
+  }
+
+  getDependCharacteristics() {
+    return 'Depends of characteristics';
+  }
+
   getBody() {
     return 'Body type';
   }
