@@ -76,7 +76,8 @@
                      [localization]="appService.getLocalization().getCharacteristicsLocalization()"
                      [options]="options.characteristicOptions"></app-characteristics>
 
-<app-background></app-background>
+<app-background [hidden]="!options.backgroundOptions.hasActiveOption()"
+                [options]="options.backgroundOptions"></app-background>
 
 <div class="text-right">
   <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">

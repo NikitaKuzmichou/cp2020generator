@@ -4,6 +4,7 @@ import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
 import { GenerationOptions } from './generation.options';
 import { CharacteristicsComponent } from './characteristics/characteristics.component';
+import {BackgroundComponent} from './background/background.component';
 
 @Component({
   selector: 'app-character',
@@ -14,6 +15,8 @@ export class CharacterComponent implements OnInit {
   private showOptions: boolean;
   @ViewChild(CharacteristicsComponent)
   private characteristics: CharacteristicsComponent;
+  @ViewChild(BackgroundComponent)
+  private background: BackgroundComponent;
   localization: CharacterLocalization;
   options: GenerationOptions;
 
@@ -52,6 +55,7 @@ export class CharacterComponent implements OnInit {
   generateInfo() {
     /**TODO*/
     this.characteristics.onGenerate();
+    this.background.onGenerate();
   }
 
   isLanguageChanged() {
