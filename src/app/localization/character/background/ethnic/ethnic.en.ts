@@ -56,4 +56,20 @@ export class EthnicLocalizationEn implements EthnicLocalization {
     return ['Central European/Soviet',
       ['Bulgarian', 'Russian', 'Polish', 'Ukrainian', 'Slovak']];
   }
+
+  getGenerate() {
+    return 'Generate';
+  }
+
+  getHeader() {
+    return 'Ethnic origins';
+  }
+
+  getOrigin() {
+    return 'Origin';
+  }
+
+  getLanguages() {
+    return 'Languages';
+  }
 }

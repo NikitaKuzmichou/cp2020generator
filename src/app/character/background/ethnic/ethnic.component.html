@@ -1,1 +1,24 @@
-<p>ethnic works!</p>
+<div class="container ethnic text-center" [hidden]="!isGenerated">
+  <div class="bg-success text-white">{{localization.getHeader()}}</div>
+
+  <table class="table table-striped table-borderless">
+    <thead>
+      <tr>
+        <th>{{localization.getOrigin()}}</th>
+        <th>{{localization.getLanguages()}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{getEthnicOrigin()}}</td>
+        <td>
+          <span *ngFor="let language of getEthnicLanguages()">{{language}} </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="btn btn-outline-primary" (click)="onGenerate()">
+    {{localization.getGenerate()}}
+  </div>
+</div>

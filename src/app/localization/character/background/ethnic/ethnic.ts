@@ -11,4 +11,8 @@ export interface EthnicLocalization extends Localization {
   getHispanicAmerican();
   getSouthAmerican();
   getEuropean();
+  getGenerate();
+  getHeader();
+  getOrigin();
+  getLanguages();
 }
