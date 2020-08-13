@@ -37,14 +37,20 @@ export class DressComponent implements OnInit {
   }
 
   getClothes() {
-    this.service.getClothes(this.roll, this.localization);
+    if (this.roll) {
+      this.service.getClothes(this.roll, this.localization);
+    }
   }
 
   getHairstyle() {
-    this.service.getHairstyle(this.roll, this.localization);
+    if (this.roll) {
+      this.service.getHairstyle(this.roll, this.localization);
+    }
   }
 
   getAffectations() {
-    this.service.getAffectations(this.roll, this.localization);
+    if (this.roll){
+      this.service.getAffectations(this.roll, this.localization);
+    }
   }
 }

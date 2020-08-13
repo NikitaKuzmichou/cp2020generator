@@ -36,7 +36,6 @@ export class EthnicComponent implements OnInit {
     }
   }
 
-  /**TODO*/
   getEthnicOrigin() {
     if (this.roll) {
       return this.service.getEthnicOrigin(this.roll, this.localization)[0];
