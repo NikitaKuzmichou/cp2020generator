@@ -6,6 +6,8 @@ import { EthnicComponent } from './ethnic/ethnic.component';
 import { EventsComponent } from './events/events.component';
 import { FamilyComponent } from './family/family.component';
 import { MotivationComponent } from './motivation/motivation.component';
+import { EthnicLocalization } from '../../localization/character/background/ethnic/ethnic';
+import { DressLocalization } from '../../localization/character/background/dress/dress';
 
 @Component({
   selector: 'app-background',
@@ -14,6 +16,9 @@ import { MotivationComponent } from './motivation/motivation.component';
 })
 export class BackgroundComponent implements OnInit {
   @Input() options: BackgroundOptions;
+  //@Input() bgLocalization: BackgroundLocalization;
+  @Input() ethnicLocalization: EthnicLocalization;
+  @Input() dressLocalization: DressLocalization;
   @ViewChild(DressComponent)
   private dress;
   @ViewChild(EthnicComponent)
@@ -35,6 +40,6 @@ export class BackgroundComponent implements OnInit {
 
   onGenerate() {
     this.isGenerated = true;
+    this.ethnic.onGenerate();
   }
-
 }

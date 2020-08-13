@@ -77,7 +77,11 @@
                      [options]="options.characteristicOptions"></app-characteristics>
 
 <app-background [hidden]="!options.backgroundOptions.hasActiveOption()"
-                [options]="options.backgroundOptions"></app-background>
+                [options]="options.backgroundOptions"
+                [ethnicLocalization]="appService.getLocalization().getCharacterEthnicLocalization()"
+                [dressLocalization]="appService.getLocalization().getCharacterDressLocalization()"
+>
+</app-background>
 
 <div class="text-right">
   <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">

@@ -3,6 +3,7 @@ import { NavLocalizationEn } from '../../localization/nav/nav.en';
 import { CharacterLocalizationEn } from '../../localization/character/character.en';
 import { CharacteristicsLocalizationEn } from '../../localization/character/characteristics/characteristics.en';
 import { EthnicLocalizationEn } from '../../localization/character/background/ethnic/ethnic.en';
+import { DressLocalizationEn } from '../../localization/character/background/dress/dress.en';
 
 export class EnLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -19,5 +20,9 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getCharacterEthnicLocalization() {
     return new EthnicLocalizationEn();
+  }
+
+  getCharacterDressLocalization() {
+    return new DressLocalizationEn();
   }
 }

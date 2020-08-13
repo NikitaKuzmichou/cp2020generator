@@ -31,7 +31,7 @@ export class CharacteristicsLocalizationRu implements CharacteristicsLocalizatio
   }
 
   getHeader() {
-    return 'Характеристики персонажа';
+    return 'Характеристики';
   }
 
   getCool() {

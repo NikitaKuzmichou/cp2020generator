@@ -1,1 +1,24 @@
-<p>dress works!</p>
+<div class="container ethnic text-center" [hidden]="!isGenerated">
+  <div class="bg-success text-white">{{localization.getHeader()}}</div>
+
+  <table class="table table-striped table-borderless">
+    <thead>
+    <tr>
+      <th>{{localization.getClothes()}}</th>
+      <th>{{localization.getHairstyle()}}</th>
+      <th>{{localization.getAffectations()}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{getClothes()}}</td>
+      <td>{{getHairstyle()}}</td>
+      <td>{{getAffectations()}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="btn btn-outline-primary" (click)="onGenerate()">
+    {{localization.getGenerate()}}
+  </div>
+</div>

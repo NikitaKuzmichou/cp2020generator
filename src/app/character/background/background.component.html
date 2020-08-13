@@ -1,11 +1,20 @@
 <div class="background" [hidden]="!isGenerated">
-  <app-ethnic></app-ethnic>
+
+  <div class="bg-success text-white"></div>
+
+  <app-ethnic [selected]="options.ethnic"
+              [localization]="ethnicLocalization"></app-ethnic>
 
   <app-family></app-family>
 
-  <app-dress></app-dress>
+  <app-dress [selected]="options.dress"
+             [localization]="dressLocalization"></app-dress>
 
   <app-motivation></app-motivation>
 
   <app-events></app-events>
+
+  <div class="btn btn-outline-primary" (click)="onGenerate()">
+
+  </div>
 </div>

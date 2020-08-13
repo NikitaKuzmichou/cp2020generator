@@ -1,0 +1,39 @@
+import { Localization } from '../../../localization';
+
+export interface DressLocalization extends Localization {
+  getGenerate();
+  getHeader();
+  getClothes();
+  getBikerLeathers();
+  getBlueJeans();
+  getCorporateSuits();
+  getJumpsuits();
+  getMiniSkirts();
+  getHighFashion();
+  getCammos();
+  getNormalClothes();
+  getNude();
+  getBagLadyChic();
+  getHairstyle();
+  getMohawk();
+  getLongRatty();
+  getShortSpiked();
+  getWild();
+  getBald();
+  getStriped();
+  getTinted();
+  getNeat();
+  getShort();
+  getLong();
+  getAffectations();
+  getTatoos();
+  getMirrorshades();
+  getRitualScars();
+  getSpikedGloves();
+  getNoseRings();
+  getEarrings();
+  getLongFingernails();
+  getHeeledBoots();
+  getContactLenses();
+  getFingerlessGloves();
+}

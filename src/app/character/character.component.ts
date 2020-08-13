@@ -4,7 +4,7 @@ import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
 import { GenerationOptions } from './generation.options';
 import { CharacteristicsComponent } from './characteristics/characteristics.component';
-import {BackgroundComponent} from './background/background.component';
+import { BackgroundComponent } from './background/background.component';
 
 @Component({
   selector: 'app-character',

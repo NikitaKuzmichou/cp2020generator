@@ -31,7 +31,7 @@ export class CharacteristicsLocalizationEn implements CharacteristicsLocalizatio
   }
 
   getHeader() {
-    return 'Character characteristics';
+    return 'Characteristics';
   }
 
   getCool() {
