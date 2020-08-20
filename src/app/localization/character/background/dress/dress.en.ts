@@ -18,131 +18,92 @@ export class DressLocalizationEn implements DressLocalization {
     return 'Clothes';
   }
 
-  getBikerLeathers() {
-    return 'Biker leathers';
-  }
-
-  getBlueJeans() {
-    return 'Blue jeans';
-  }
-
-  getCorporateSuits() {
-    return 'Corporate suits';
-  }
-
-  getJumpsuits() {
-    return 'Jump suits';
-  }
-
-  getMiniSkirts() {
-    return 'Mini skirts';
-  }
-
-  getHighFashion() {
-    return 'High fashion';
-  }
-
-  getCammos() {
-    return 'Cammos';
-  }
-
-  getNormalClothes() {
-    return 'Normal clothes';
-  }
-
-  getNude() {
-    return 'Nude';
-  }
-
-  getBagLadyChic() {
-    return 'Bag lady chic';
+  getClothesByRoll(roll: number) {
+    switch (roll) {
+      case 1:
+        return 'Biker leathers';
+      case 2:
+        return 'Blue jeans';
+      case 3:
+        return 'Corporate suits';
+      case 4:
+        return 'Jump suits';
+      case 5:
+        return 'Mini skirts';
+      case 6:
+        return 'High fashion';
+      case 7:
+        return 'Cammos';
+      case 8:
+        return 'Normal clothes';
+      case 9:
+        return 'Nude';
+      case 10:
+        return 'Bag lady chic';
+      default:
+        return 'Something goes wrong';
+    }
   }
 
   getHairstyle() {
     return 'Hairstyle';
   }
 
-  getMohawk() {
-    return 'Mohawk';
-  }
-
-  getLongRatty() {
-    return 'Long & ratty';
-  }
-
-  getShortSpiked() {
-    return 'Short & spiked';
-  }
-
-  getWild() {
-    return 'Wild & all over';
-  }
-
-  getBald() {
-    return 'Bald';
-  }
-
-  getStriped() {
-    return 'Striped';
-  }
-
-  getTinted() {
-    return 'Tinted';
-  }
-
-  getNeat() {
-    return 'Neat, short';
-  }
-
-  getShort() {
-    return 'Short, curly';
-  }
-
-  getLong() {
-    return 'Long, straight';
+  getHairstyleByRoll(roll: number) {
+    switch (roll) {
+      case 1:
+        return 'Mohawk';
+      case 2:
+        return 'Long & ratty';
+      case 3:
+        return 'Short & spiked';
+      case 4:
+        return 'Wild & all over';
+      case 5:
+        return 'Bald';
+      case 6:
+        return 'Striped';
+      case 7:
+        return 'Tinted';
+      case 8:
+        return 'Neat, short';
+      case 9:
+        return 'Short, curly';
+      case 10:
+        return 'Long, straight';
+      default:
+        return 'Something goes wrong';
+    }
   }
 
   getAffectations() {
     return 'Affectations';
   }
 
-  getTatoos() {
-    return 'Tatoos';
-  }
-
-  getMirrorshades() {
-    return 'Mirrorshades';
-  }
-
-  getRitualScars() {
-    return 'Ritual scars';
-  }
-
-  getSpikedGloves() {
-    return 'Spiked gloves';
-  }
-
-  getNoseRings() {
-    return 'Nose rings';
-  }
-
-  getEarrings() {
-    return 'Earrings';
-  }
-
-  getLongFingernails() {
-    return 'Long fingernails';
-  }
-
-  getHeeledBoots() {
-    return 'Spike heeled boots';
-  }
-
-  getContactLenses() {
-    return 'Weird contact lenses';
-  }
-
-  getFingerlessGloves() {
-    return 'Fingerless gloves';
+  getAffectationsByRoll(roll: number) {
+    switch (roll) {
+      case 1:
+        return 'Tatoos';
+      case 2:
+        return 'Mirrorshades';
+      case 3:
+        return 'Ritual scars';
+      case 4:
+        return 'Spiked gloves';
+      case 5:
+        return 'Nose Rings';
+      case 6:
+        return 'Earrings';
+      case 7:
+        return 'Long fingernails';
+      case 8:
+        return 'Spike heeled boots';
+      case 9:
+        return 'Weird contact lenses';
+      case 10:
+        return 'Fingerless gloves';
+      default:
+        return 'Something goes wrong';
+    }
   }
 }

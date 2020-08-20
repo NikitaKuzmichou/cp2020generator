@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
-import { DressService } from './dress.service';
 import { DressLocalization } from '../../../localization/character/background/dress/dress';
 
 @Component({
@@ -13,7 +12,6 @@ import { DressLocalization } from '../../../localization/character/background/dr
 export class DressComponent implements OnInit {
   private roll: number;
   private d10: Dice;
-  private service: DressService;
   @Input() selected: boolean;
   @Input() localization: DressLocalization;
   isGenerated: boolean;
@@ -25,7 +23,6 @@ export class DressComponent implements OnInit {
     this.isGenerated = false;
     this.d10 = new DiceD10();
     this.roll = null;
-    this.service = new DressService();
   }
 
   onGenerate() {
@@ -39,19 +36,19 @@ export class DressComponent implements OnInit {
 
   getClothes() {
     if (this.roll) {
-      this.service.getClothes(this.roll, this.localization);
+      this.localization.getClothesByRoll(this.roll);
     }
   }
 
   getHairstyle() {
     if (this.roll) {
-      this.service.getHairstyle(this.roll, this.localization);
+      this.localization.getHairstyleByRoll(this.roll);
     }
   }
 
   getAffectations() {
-    if (this.roll){
-      this.service.getAffectations(this.roll, this.localization);
+    if (this.roll) {
+      this.localization.getAffectationsByRoll(this.roll);
     }
   }
 }
