@@ -71,6 +71,11 @@
     </div>
   </ng-template>
 </div>
+<div class="text-right">
+  <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">
+    {{localization.getGenerateBtn()}}
+  </button>
+</div>
 
 <app-characteristics [hidden]="!options.characteristicOptions.selected"
                      [localization]="appService.getLocalization().getCharacteristicsLocalization()"
@@ -83,9 +88,3 @@
                 [motivationLocalization]="appService.getLocalization().getMotivationLocalization()"
 >
 </app-background>
-
-<div class="text-right">
-  <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">
-    {{localization.getGenerateBtn()}}
-  </button>
-</div>
