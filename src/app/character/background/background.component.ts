@@ -8,6 +8,7 @@ import { FamilyComponent } from './family/family.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { EthnicLocalization } from '../../localization/character/background/ethnic/ethnic';
 import { DressLocalization } from '../../localization/character/background/dress/dress';
+import { MotivationLocalization } from '../../localization/character/background/motivations/motivation';
 
 @Component({
   selector: 'app-background',
@@ -19,6 +20,7 @@ export class BackgroundComponent implements OnInit {
   //@Input() bgLocalization: BackgroundLocalization;
   @Input() ethnicLocalization: EthnicLocalization;
   @Input() dressLocalization: DressLocalization;
+  @Input() motivationLocalization: MotivationLocalization;
   @ViewChild(DressComponent)
   private dress;
   @ViewChild(EthnicComponent)

@@ -4,6 +4,7 @@ import { CharacterLocalizationRu } from '../../localization/character/character.
 import { CharacteristicsLocalizationRu } from '../../localization/character/characteristics/characteristics.ru';
 import { EthnicLocalizationRu } from '../../localization/character/background/ethnic/ethnic.ru';
 import { DressLocalizationRu } from '../../localization/character/background/dress/dress.ru';
+import { MotivationLocalizationRu } from '../../localization/character/background/motivations/motivation.ru';
 
 export class RuLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -24,5 +25,9 @@ export class RuLocalizationFactory implements LocalizationFactory {
 
   getCharacterDressLocalization() {
     return new DressLocalizationRu();
+  }
+
+  getMotivationLocalization() {
+    return new MotivationLocalizationRu();
   }
 }

@@ -4,4 +4,5 @@ export interface LocalizationFactory {
   getCharacteristicsLocalization();
   getCharacterEthnicLocalization();
   getCharacterDressLocalization();
+  getMotivationLocalization();
 }

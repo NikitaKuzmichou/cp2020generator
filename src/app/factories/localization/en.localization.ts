@@ -4,6 +4,7 @@ import { CharacterLocalizationEn } from '../../localization/character/character.
 import { CharacteristicsLocalizationEn } from '../../localization/character/characteristics/characteristics.en';
 import { EthnicLocalizationEn } from '../../localization/character/background/ethnic/ethnic.en';
 import { DressLocalizationEn } from '../../localization/character/background/dress/dress.en';
+import { MotivationLocalizationEn } from '../../localization/character/background/motivations/motivation.en';
 
 export class EnLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -24,5 +25,9 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getCharacterDressLocalization() {
     return new DressLocalizationEn();
+  }
+
+  getMotivationLocalization() {
+    return new MotivationLocalizationEn();
   }
 }
