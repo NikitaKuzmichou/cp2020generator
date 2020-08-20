@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { EthnicLocalization } from '../../../localization/character/background/ethnic/ethnic';
-import { EthnicService } from './ethnic.service';
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
 
@@ -13,7 +12,6 @@ import { DiceD10 } from '../../../service/dices/dice.d10';
 export class EthnicComponent implements OnInit {
   private roll: number;
   private d10: Dice;
-  private service: EthnicService;
   @Input() selected: boolean;
   @Input() localization: EthnicLocalization;
   isGenerated: boolean;
@@ -24,7 +22,6 @@ export class EthnicComponent implements OnInit {
     this.isGenerated = false;
     this.d10 = new DiceD10();
     this.roll = null;
-    this.service = new EthnicService();
   }
 
   onGenerate() {
@@ -38,13 +35,13 @@ export class EthnicComponent implements OnInit {
 
   getEthnicOrigin() {
     if (this.roll) {
-      return this.service.getEthnicOrigin(this.roll, this.localization)[0];
+      return this.localization.getOriginByRoll(this.roll);
     }
   }
 
   getEthnicLanguages() {
     if (this.roll) {
-      return this.service.getEthnicOrigin(this.roll, this.localization)[1];
+      return this.localization.getLanguagesByRoll(this.roll);
     }
   }
 }
