@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
 import { DressService } from './dress.service';
