@@ -7,5 +7,4 @@ export interface EthnicLocalization extends Localization {
   getOriginByRoll(roll: number);
   getLanguages();
   getLanguagesByRoll(roll: number);
-
 }
