@@ -26,20 +26,18 @@
       <th>{{localization.getChildEnv()}}</th>
       <td>{{getChildEnv()}}</td>
     </tr>
+    <tr>
+      <th>{{localization.getSibling()}}</th>
+      <td>{{getNumSiblings()}}</td>
+    </tr>
   </table>
-  <div class="text-center">
+  <span *ngFor="let sibling of getSiblings(); index as i">
     <div class="row">
-      <div class="col font-weight-bold">{{localization.getSibling()}}</div>
-      <div class="col">{{getNumSiblings()}}</div>
+      <div class="col">{{getSiblingGender(i)}}</div><br>
+      <div class="col">{{getSiblingAge(i)}}</div><br>
+      <div class="col">{{getSiblingFeelings(i)}}</div><br>
     </div>
-    <span *ngFor="let sibling of getSiblings(); index as i">
-      <div class="row">
-        <div class="col">{{getSiblingGender(i)}}</div><br>
-        <div class="col">{{getSiblingAge(i)}}</div><br>
-        <div class="col">{{getSiblingFeelings(i)}}</div><br>
-      </div>
-    </span>
-  </div>
+  </span>
 
   <div class="btn btn-outline-primary" (click)="onGenerate()">
     {{localization.getGenerate()}}
