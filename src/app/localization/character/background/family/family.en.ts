@@ -194,12 +194,8 @@ export class FamilyLocalizationEn implements FamilyLocalization {
       case 6:
       case 7:
         return 'You have ' + roll + ' brothers/sisters';
-      case 8:
-      case 9:
-      case 10:
-        return 'You are an only child';
       default:
-        return 'Something goes wrong';
+        return 'You are an only child';
     }
   }
 

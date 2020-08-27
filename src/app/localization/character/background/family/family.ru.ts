@@ -194,12 +194,8 @@ export class FamilyLocalizationRu implements FamilyLocalization {
       case 6:
       case 7:
         return 'У тебя ' + roll + ' братьев/сестрёр';
-      case 8:
-      case 9:
-      case 10:
-        return 'Ты единственный ребёнок';
       default:
-        return 'Что-то пошло не так';
+        return 'Ты единственный ребёнок';
     }
   }
 

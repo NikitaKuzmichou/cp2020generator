@@ -8,8 +8,4 @@ export class FamilyRolls {
   tragedy: number;
   childEnv: number;
   siblings: Array<SiblingRolls>;
-
-  FamilyRolls() {
-    this.siblings = new Array<SiblingRolls>();
-  }
 }

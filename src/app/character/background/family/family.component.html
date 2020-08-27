@@ -1,2 +1,47 @@
-<!--TODO NEXT-->
+<div class="container family text-center" [hidden]="!isGenerated">
+  <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
+  <table class="table table-striped table-borderless">
+    <tr>
+      <th>{{localization.getRanking()}}</th>
+      <td>{{getFamilyRanking()}}</td>
+    </tr>
+    <tr>
+      <th>{{localization.getParents()}}</th>
+      <td>{{getParents()}}</td>
+    </tr>
+    <tr [hidden]="!isSomethingHapped()">
+      <th>{{localization.getHappedEvent()}}</th>
+      <td>{{getSomethingHapped()}}</td>
+    </tr>
+    <tr>
+      <th>{{localization.getStatus()}}</th>
+      <td>{{getStatus()}}</td>
+    </tr>
+    <tr [hidden]="!isTragedyEvent()">
+      <th>{{localization.getTragedy()}}</th>
+      <td>{{getTragedy()}}</td>
+    </tr>
+    <tr>
+      <th>{{localization.getChildEnv()}}</th>
+      <td>{{getChildEnv()}}</td>
+    </tr>
+  </table>
+  <div class="text-center">
+    <div class="row">
+      <div class="col font-weight-bold">{{localization.getSibling()}}</div>
+      <div class="col">{{getNumSiblings()}}</div>
+    </div>
+    <span *ngFor="let sibling of getSiblings(); index as i">
+      <div class="row">
+        <div class="col">{{getSiblingGender(i)}}</div><br>
+        <div class="col">{{getSiblingAge(i)}}</div><br>
+        <div class="col">{{getSiblingFeelings(i)}}</div><br>
+      </div>
+    </span>
+  </div>
+
+  <div class="btn btn-outline-primary" (click)="onGenerate()">
+    {{localization.getGenerate()}}
+  </div>
+</div>

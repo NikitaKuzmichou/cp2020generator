@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FamilyService } from './family.service';
 import { FamilyRolls } from './family.rolls';
 import { FamilyLocalization } from '../../../localization/character/background/family/family';
-import { SiblingRolls } from './sibling.rolls';
 
 @Component({
   selector: 'app-family',
@@ -34,42 +33,80 @@ export class FamilyComponent implements OnInit {
   }
 
   getFamilyRanking() {
-    return this.localization.getRankingByRoll(this.rolls.ranking);
+    if (this.rolls) {
+      return this.localization.getRankingByRoll(this.rolls.ranking);
+    }
   }
 
   getParents() {
-    return this.localization.getParentsByRoll(this.rolls.parents);
+    if (this.rolls) {
+      return this.localization.getParentsByRoll(this.rolls.parents);
+    }
+  }
+
+  isSomethingHapped() {
+    if (this.rolls) {
+      return this.rolls.somethingHapped > 6;
+    }
   }
 
   getSomethingHapped() {
-    return this.localization.getHappedEventByRoll(this.rolls.somethingHapped);
+    if (this.rolls) {
+      return this.localization.getHappedEventByRoll(this.rolls.somethingHapped);
+    }
   }
 
   getStatus() {
-    return this.localization.getStatusByRoll(this.rolls.status);
+    if (this.rolls) {
+      return this.localization.getStatusByRoll(this.rolls.status);
+    }
   }
 
   getChildEnv() {
-    return this.localization.getChildEnvByRoll(this.rolls.childEnv);
+    if (this.rolls) {
+      return this.localization.getChildEnvByRoll(this.rolls.childEnv);
+    }
+  }
+
+  isTragedyEvent() {
+    if (this.rolls) {
+      return this.rolls.tragedy < 7;
+    }
   }
 
   getTragedy() {
-    return this.localization.getTragedyByRoll(this.rolls.tragedy);
+    if (this.rolls) {
+      return this.localization.getTragedyByRoll(this.rolls.tragedy);
+    }
+  }
+
+  getSiblings() {
+    if (this.rolls) {
+      return this.rolls.siblings;
+    }
   }
 
   getNumSiblings() {
-    return this.localization.getNumSiblingsByRoll(this.rolls.siblings.length);
+    if (this.rolls) {
+      return this.localization.getNumSiblingsByRoll(this.rolls.siblings.length);
+    }
   }
 
   getSiblingGender(num) {
-    return this.localization.getSiblingGenderByRoll(this.rolls.siblings[num].gender);
+    if (this.rolls) {
+      return this.localization.getSiblingGenderByRoll(this.rolls.siblings[num].gender);
+    }
   }
 
   getSiblingAge(num) {
-    return this.localization.getSiblingGenderByRoll(this.rolls.siblings[num].age);
+    if (this.rolls) {
+      return this.localization.getSiblingAgeByRoll(this.rolls.siblings[num].age);
+    }
   }
 
   getSiblingFeelings(num) {
-    return this.localization.getSiblingGenderByRoll(this.rolls.siblings[num].feelings);
+    if (this.rolls) {
+      return this.localization.getSiblingFeelingsByRoll(this.rolls.siblings[num].feelings);
+    }
   }
 }

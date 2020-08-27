@@ -2,13 +2,14 @@
 
   <div class="bg-success text-white"></div>
 
+  <app-dress [selected]="options.dress"
+             [localization]="dressLocalization"></app-dress>
+
   <app-ethnic [selected]="options.ethnic"
               [localization]="ethnicLocalization"></app-ethnic>
 
-  <app-family></app-family>
-
-  <app-dress [selected]="options.dress"
-             [localization]="dressLocalization"></app-dress>
+  <app-family [selected]="options.family"
+              [localization]="familyLocalization"></app-family>
 
   <app-motivation [selected]="options.motivation"
                   [localization]="motivationLocalization"></app-motivation>

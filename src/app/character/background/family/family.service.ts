@@ -7,7 +7,7 @@ export class FamilyService {
   private rolls: FamilyRolls;
   private dice: Dice;
 
-  FamilyService() {
+   constructor() {
     this.rolls = new FamilyRolls();
     this.dice = new DiceD10();
   }
