@@ -1,4 +1,4 @@
-<div class="container motivation text-center" [hidden]="!isGenerated">
+<div class="container motivation text-center" [hidden]="!(isGenerated && selected)">
   <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
   <ul class="list-unstyled">
