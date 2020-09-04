@@ -6,4 +6,9 @@ export interface LocalizationFactory {
   getCharacterDressLocalization();
   getMotivationLocalization();
   getFamilyLocalization();
+  getEventsLocalization();
+  getRomanticEventsLocalization();
+  getProblemsWinsEventsLocalization();
+  getNothingHappenedEventsLocalization();
+  getFriendsEnemiesEventsLocalization();
 }

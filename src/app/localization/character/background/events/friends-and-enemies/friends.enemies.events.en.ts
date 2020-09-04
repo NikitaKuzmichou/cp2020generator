@@ -1,6 +1,6 @@
 import { AppLanguage } from '../../../../../app.language';
 import { FriendsEnemiesEventsLocalization } from './friends.enemies.events';
-import {DiceD6} from '../../../../../service/dices/dice.d6';
+import { DiceD6 } from '../../../../../service/dices/dice.d6';
 
 export class FriendsEnemiesEventsLocalizationEn implements FriendsEnemiesEventsLocalization {
   getHeader() {

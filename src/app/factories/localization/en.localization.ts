@@ -6,6 +6,11 @@ import { EthnicLocalizationEn } from '../../localization/character/background/et
 import { DressLocalizationEn } from '../../localization/character/background/dress/dress.en';
 import { MotivationLocalizationEn } from '../../localization/character/background/motivations/motivation.en';
 import { FamilyLocalizationEn } from '../../localization/character/background/family/family.en';
+import { FriendsEnemiesEventsLocalizationEn } from '../../localization/character/background/events/friends-and-enemies/friends.enemies.events.en';
+import { NothingHappenedEventsLocalizationEn } from '../../localization/character/background/events/nothing-happened/nothing.happened.events.en';
+import { ProblemsWinsEventsLocalizationEn } from '../../localization/character/background/events/problems-and-wins/problems.wins.events.en';
+import { RomanticEventsLocalizationEn } from '../../localization/character/background/events/romantic/romantic.events.en';
+import { EventsLocalizationEn } from '../../localization/character/background/events/events.en';
 
 export class EnLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -34,5 +39,26 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getFamilyLocalization() {
     return new FamilyLocalizationEn();
+  }
+
+
+  getEventsLocalization() {
+    return new EventsLocalizationEn();
+  }
+
+  getRomanticEventsLocalization() {
+    return new RomanticEventsLocalizationEn();
+  }
+
+  getProblemsWinsEventsLocalization() {
+    return new ProblemsWinsEventsLocalizationEn();
+  }
+
+  getNothingHappenedEventsLocalization() {
+    return new NothingHappenedEventsLocalizationEn();
+  }
+
+  getFriendsEnemiesEventsLocalization() {
+    return new FriendsEnemiesEventsLocalizationEn();
   }
 }

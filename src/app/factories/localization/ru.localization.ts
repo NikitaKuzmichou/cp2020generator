@@ -6,6 +6,11 @@ import { EthnicLocalizationRu } from '../../localization/character/background/et
 import { DressLocalizationRu } from '../../localization/character/background/dress/dress.ru';
 import { MotivationLocalizationRu } from '../../localization/character/background/motivations/motivation.ru';
 import { FamilyLocalizationRu } from '../../localization/character/background/family/family.ru';
+import { EventsLocalizationRu } from '../../localization/character/background/events/events.ru';
+import { RomanticEventsLocalizationRu } from '../../localization/character/background/events/romantic/romantic.events.ru';
+import { ProblemsWinsEventsLocalizationRu } from '../../localization/character/background/events/problems-and-wins/problems.wins.events.ru';
+import { NothingHappenedEventsLocalizationRu } from '../../localization/character/background/events/nothing-happened/nothing.happened.events.ru';
+import { FriendsEnemiesEventsLocalizationRu } from '../../localization/character/background/events/friends-and-enemies/friends.enemies.events.ru';
 
 export class RuLocalizationFactory implements LocalizationFactory {
   getCharacterLocalization() {
@@ -34,5 +39,25 @@ export class RuLocalizationFactory implements LocalizationFactory {
 
   getFamilyLocalization() {
     return new FamilyLocalizationRu();
+  }
+
+  getEventsLocalization() {
+    return new EventsLocalizationRu();
+  }
+
+  getRomanticEventsLocalization() {
+    return new RomanticEventsLocalizationRu();
+  }
+
+  getProblemsWinsEventsLocalization() {
+    return new ProblemsWinsEventsLocalizationRu();
+  }
+
+  getNothingHappenedEventsLocalization() {
+    return new NothingHappenedEventsLocalizationRu();
+  }
+
+  getFriendsEnemiesEventsLocalization() {
+    return new FriendsEnemiesEventsLocalizationRu();
   }
 }
