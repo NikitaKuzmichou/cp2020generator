@@ -7,7 +7,7 @@ export class RomanticEventsLocalizationEn implements RomanticEventsLocalization 
   }
 
   getGeneratedPerson() {
-    return 'It was: ';
+    return 'It was';
   }
 
   getHowWorked() {

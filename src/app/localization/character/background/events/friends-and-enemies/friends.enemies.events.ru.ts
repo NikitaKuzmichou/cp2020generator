@@ -7,7 +7,7 @@ export class FriendsEnemiesEventsLocalizationRu implements FriendsEnemiesEventsL
     return 'Друзья и враги';
   }
 
-  getFriendEnemies(roll: number) {
+  getFriendEnemy(roll: number) {
     if (roll < 6) {
       return 'У тебя появился друг';
     } else {
@@ -21,11 +21,6 @@ export class FriendsEnemiesEventsLocalizationRu implements FriendsEnemiesEventsL
     } else {
       return 'Это женщина. Её внешний вид и мотивация';
     }
-  }
-
-  //TODO
-  getGeneratePerson() {
-    return '';
   }
 
   getFriend() {

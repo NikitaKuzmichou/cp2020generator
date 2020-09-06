@@ -44,6 +44,7 @@ export class CharacterComponent implements OnInit {
     return this.options.hasActiveOption();
   }
 
+  /**TODO*/
   checkInputAge(event) {
     if (event.path[0].value < 16) {
       event.path[0].value = 16;

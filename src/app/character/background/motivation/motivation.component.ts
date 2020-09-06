@@ -13,6 +13,7 @@ export class MotivationComponent implements OnInit {
   private d10: Dice;
   @Input() selected: boolean;
   @Input() localization: MotivationLocalization;
+  @Input() generateAfterCreation: boolean;
   isGenerated: boolean;
 
   constructor() { }
@@ -21,6 +22,9 @@ export class MotivationComponent implements OnInit {
     this.isGenerated = false;
     this.d10 = new DiceD10();
     this.roll = null;
+    if (this.generateAfterCreation) {
+      this.onGenerate();
+    }
   }
 
   onGenerate() {

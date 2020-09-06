@@ -14,7 +14,14 @@
   <app-motivation [selected]="options.motivation"
                   [localization]="motivationLocalization"></app-motivation>
 
-  <app-events></app-events>
+  <app-events [options]="options.events"
+              [localization]="eventsLocalization"
+              [romanticLocalization]="eventsRomanticLocalization"
+              [problAndWinsLocalization]="eventsProblAndWinsLocalization"
+              [nothHappLocalization]="eventsNothHappLocalization"
+              [friendsEnemLocalization]="eventsFriendsEnemLocalization"
+              [motivationLocalization]="motivationLocalization"
+              [dressLocalization]="dressLocalization"></app-events>
 
   <div class="btn btn-outline-primary" (click)="onGenerate()">
 

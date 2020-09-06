@@ -56,18 +56,5 @@ export class CharacteristicsService {
       default:
         return -5;
     }
-    /**if (body < 3 ) {
-      return -0;
-    } else if (body < 5) {
-      return -1;
-    } else if (body < 8) {
-      return -2;
-    } else if (body < 10) {
-      return -3;
-    } else if (body < 11) {
-      return -4;
-    } else {
-      return -5;
-    }*/
   }
 }

@@ -14,6 +14,7 @@ export class DressComponent implements OnInit {
   private d10: Dice;
   @Input() selected: boolean;
   @Input() localization: DressLocalization;
+  @Input() generateAfterCreation: boolean;
   isGenerated: boolean;
 
   constructor() {
@@ -23,6 +24,9 @@ export class DressComponent implements OnInit {
     this.isGenerated = false;
     this.d10 = new DiceD10();
     this.roll = null;
+    if (this.generateAfterCreation) {
+      this.onGenerate();
+    }
   }
 
   onGenerate() {
