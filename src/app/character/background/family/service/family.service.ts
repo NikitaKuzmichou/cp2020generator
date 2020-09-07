@@ -1,7 +1,7 @@
 import { FamilyRolls } from './family.rolls';
 import { SiblingRolls } from './sibling.rolls';
-import { Dice } from '../../../service/dices/dice';
-import { DiceD10 } from '../../../service/dices/dice.d10';
+import { Dice } from '../../../../service/dices/dice';
+import { DiceD10 } from '../../../../service/dices/dice.d10';
 
 export class FamilyService {
   private rolls: FamilyRolls;

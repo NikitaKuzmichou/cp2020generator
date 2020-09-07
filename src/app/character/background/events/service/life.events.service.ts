@@ -1,4 +1,4 @@
-import { LifeEventsOptions } from '../life.events.options';
+import { LifeEventsOptions } from './life.events.options';
 import { LifeEvent } from './life.event';
 
 import { Dice } from '../../../../service/dices/dice';

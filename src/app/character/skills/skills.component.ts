@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CharacteristicsService } from '../characteristics/characteristics.service';
+import { CharacteristicsService } from '../characteristics/service/characteristics.service';
 
 @Component({
   selector: 'app-skills',

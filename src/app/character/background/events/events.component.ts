@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 
-import { LifeEventsOptions } from './life.events.options';
+import { LifeEventsOptions } from './service/life.events.options';
 
 import { EventsLocalization } from '../../../localization/character/background/events/events';
 import { RomanticEventsLocalization } from '../../../localization/character/background/events/romantic/romantic.events';

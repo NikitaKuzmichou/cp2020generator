@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CharacteristicsService } from './characteristics.service';
-import { CharacteristicsOptions } from './characteristics.options';
-import { Characteristics } from './characteristics';
+import { CharacteristicsService } from './service/characteristics.service';
+import { CharacteristicsOptions } from './service/characteristics.options';
+import { Characteristics } from './service/characteristics';
 import { CharacteristicsLocalization } from '../../localization/character/characteristics/characteristics';
 import { ButtonsLocalization } from '../../localization/buttons/buttons';
 

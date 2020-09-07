@@ -1,4 +1,4 @@
-import { LifeEventsOptions } from './events/life.events.options';
+import { LifeEventsOptions } from './events/service/life.events.options';
 
 export class BackgroundOptions {
   dress: boolean;

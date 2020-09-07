@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FamilyService } from './family.service';
-import { FamilyRolls } from './family.rolls';
+import { FamilyService } from './service/family.service';
+import { FamilyRolls } from './service/family.rolls';
 import { FamilyLocalization } from '../../../localization/character/background/family/family';
 import { ButtonsLocalization } from '../../../localization/buttons/buttons';
 

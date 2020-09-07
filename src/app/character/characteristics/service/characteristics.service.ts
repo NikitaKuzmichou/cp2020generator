@@ -1,6 +1,6 @@
-import { DiceRoll } from '../../service/dices/dice.roll';
-import { DiceD6 } from '../../service/dices/dice.d6';
-import { Dice } from '../../service/dices/dice';
+import { DiceRoll } from '../../../service/dices/dice.roll';
+import { DiceD6 } from '../../../service/dices/dice.d6';
+import { Dice } from '../../../service/dices/dice';
 
 export class CharacteristicsService {
   private d6: Dice;
