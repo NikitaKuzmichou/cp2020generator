@@ -8,10 +8,6 @@ export class MotivationLocalizationEn implements MotivationLocalization {
       'What\'s important to you?';
   }
 
-  getGenerate() {
-    return 'Generate';
-  }
-
   getLanguage() {
     return AppLanguage.ENGLISH;
   }

@@ -2,9 +2,6 @@ import { CharacterLocalization } from './character';
 import { AppLanguage } from '../../app.language';
 
 export class CharacterLocalizationRu implements CharacterLocalization {
-  getGenerateBtn() {
-    return 'Сгенерировать';
-  }
 
   getOptionsHeader() {
     return 'Выберите опции для генерации';
@@ -28,10 +25,6 @@ export class CharacterLocalizationRu implements CharacterLocalization {
 
   getFamily() {
     return 'Предыстория семьи';
-  }
-
-  getShowOptions() {
-    return 'Показать опции для генерации';
   }
 
   getHeader() {
@@ -72,9 +65,5 @@ export class CharacterLocalizationRu implements CharacterLocalization {
 
   getNothingHappened() {
     return 'Предотвратить события "Ничего не случилось в этом году"';
-  }
-
-  getHideOptions() {
-    return 'Скрыть опции';
   }
 }

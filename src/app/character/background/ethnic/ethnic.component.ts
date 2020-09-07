@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { EthnicLocalization } from '../../../localization/character/background/ethnic/ethnic';
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
+import { ButtonsLocalization } from '../../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-ethnic',
@@ -14,6 +15,7 @@ export class EthnicComponent implements OnInit {
   private d10: Dice;
   @Input() selected: boolean;
   @Input() localization: EthnicLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   isGenerated: boolean;
 
   constructor() { }

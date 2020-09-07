@@ -14,10 +14,6 @@ export class EventsLocalizationEn implements EventsLocalization {
     return AppLanguage.RUSSIAN;
   }
 
-  getGenerate() {
-    return 'Generate';
-  }
-
   getEvents() {
     return 'Events';
   }

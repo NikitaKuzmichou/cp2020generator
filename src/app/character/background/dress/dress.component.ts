@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
 import { DressLocalization } from '../../../localization/character/background/dress/dress';
+import {ButtonsLocalization} from '../../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-dress',
@@ -14,6 +15,7 @@ export class DressComponent implements OnInit {
   private d10: Dice;
   @Input() selected: boolean;
   @Input() localization: DressLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   @Input() generateAfterCreation: boolean;
   isGenerated: boolean;
 

@@ -8,10 +8,6 @@ export class MotivationLocalizationRu implements MotivationLocalization {
       'Что важно для тебя?';
   }
 
-  getGenerate() {
-    return 'Сгенерировать';
-  }
-
   getLanguage() {
     return AppLanguage.RUSSIAN;
   }

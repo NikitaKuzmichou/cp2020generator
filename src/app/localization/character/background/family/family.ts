@@ -1,7 +1,6 @@
 import { Localization } from '../../../localization';
 
 export interface FamilyLocalization extends Localization {
-  getGenerate();
   getHeader();
   getRanking();
   getRankingByRoll(roll: number);

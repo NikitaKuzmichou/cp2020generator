@@ -2,10 +2,6 @@ import { EthnicLocalization } from './ethnic';
 import { AppLanguage } from '../../../../app.language';
 
 export class EthnicLocalizationEn implements EthnicLocalization {
-  getGenerate() {
-    return 'Generate';
-  }
-
   getHeader() {
     return 'Ethnic origins';
   }

@@ -3,27 +3,28 @@
   <div class="bg-success text-white"></div>
 
   <app-dress [selected]="options.dress"
-             [localization]="dressLocalization"></app-dress>
+             [localization]="dressLocalization"
+             [btnLocalization]="btnLocalization"></app-dress>
 
   <app-ethnic [selected]="options.ethnic"
-              [localization]="ethnicLocalization"></app-ethnic>
+              [localization]="ethnicLocalization"
+              [btnLocalization]="btnLocalization"></app-ethnic>
 
   <app-family [selected]="options.family"
-              [localization]="familyLocalization"></app-family>
+              [localization]="familyLocalization"
+              [btnLocalization]="btnLocalization"></app-family>
 
   <app-motivation [selected]="options.motivation"
-                  [localization]="motivationLocalization"></app-motivation>
+                  [localization]="motivationLocalization"
+                  [btnLocalization]="btnLocalization"></app-motivation>
 
   <app-events [options]="options.events"
               [localization]="eventsLocalization"
+              [btnLocalization]="btnLocalization"
               [romanticLocalization]="eventsRomanticLocalization"
               [problAndWinsLocalization]="eventsProblAndWinsLocalization"
               [nothHappLocalization]="eventsNothHappLocalization"
               [friendsEnemLocalization]="eventsFriendsEnemLocalization"
               [motivationLocalization]="motivationLocalization"
               [dressLocalization]="dressLocalization"></app-events>
-
-  <div class="btn btn-outline-primary" (click)="onGenerate()">
-
-  </div>
 </div>

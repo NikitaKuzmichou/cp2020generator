@@ -1,5 +1,6 @@
 import { LocalizationFactory } from './localization';
 import { NavLocalizationEn } from '../../localization/nav/nav.en';
+import { ButtonsLocalizationEn } from '../../localization/buttons/buttons.en';
 import { CharacterLocalizationEn } from '../../localization/character/character.en';
 import { CharacteristicsLocalizationEn } from '../../localization/character/characteristics/characteristics.en';
 import { EthnicLocalizationEn } from '../../localization/character/background/ethnic/ethnic.en';
@@ -19,6 +20,10 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getNavLocalization() {
     return new NavLocalizationEn();
+  }
+
+  getButtonsLocalization() {
+    return new ButtonsLocalizationEn();
   }
 
   getCharacteristicsLocalization() {

@@ -5,6 +5,7 @@ import { CharacterLocalization } from '../localization/character/character';
 import { GenerationOptions } from './generation.options';
 import { CharacteristicsComponent } from './characteristics/characteristics.component';
 import { BackgroundComponent } from './background/background.component';
+import { ButtonsLocalization } from '../localization/buttons/buttons';
 
 @Component({
   selector: 'app-character',
@@ -18,6 +19,7 @@ export class CharacterComponent implements OnInit {
   @ViewChild(BackgroundComponent)
   private background: BackgroundComponent;
   localization: CharacterLocalization;
+  btnLocalization: ButtonsLocalization;
   options: GenerationOptions;
 
   constructor(public appService: AppService) {}
@@ -30,6 +32,7 @@ export class CharacterComponent implements OnInit {
 
   updateLocalization() {
     this.localization = this.appService.getLocalization().getCharacterLocalization();
+    this.btnLocalization = this.appService.getLocalization().getButtonsLocalization();
   }
 
   onShowOptions() {

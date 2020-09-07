@@ -10,10 +10,6 @@ export class DressLocalizationEn implements DressLocalization {
     return 'Dress and personal style';
   }
 
-  getGenerate() {
-    return 'Generate';
-  }
-
   getClothes() {
     return 'Clothes';
   }

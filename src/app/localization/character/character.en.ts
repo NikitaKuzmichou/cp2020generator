@@ -26,10 +26,6 @@ export class CharacterLocalizationEn implements CharacterLocalization {
     return 'Family background';
   }
 
-  getShowOptions() {
-    return 'Show generation options';
-  }
-
   getHeader() {
     return 'Generating past for the player\'s character';
   }
@@ -68,13 +64,5 @@ export class CharacterLocalizationEn implements CharacterLocalization {
 
   getNothingHappened() {
     return 'Prevent "Nothing happened that year" events';
-  }
-
-  getGenerateBtn() {
-    return 'Generate';
-  }
-
-  getHideOptions() {
-    return 'Hide options';
   }
 }

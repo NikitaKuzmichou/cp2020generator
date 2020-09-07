@@ -15,6 +15,7 @@ import { ProblemsWinsEventsLocalization } from '../../localization/character/bac
 import { RomanticEventsLocalization } from '../../localization/character/background/events/romantic/romantic.events';
 import { NothingHappenedEventsLocalization } from '../../localization/character/background/events/nothing-happened/nothing.happened.events';
 import { FriendsEnemiesEventsLocalization } from '../../localization/character/background/events/friends-and-enemies/friends.enemies.events';
+import { ButtonsLocalization } from '../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-background',
@@ -23,6 +24,7 @@ import { FriendsEnemiesEventsLocalization } from '../../localization/character/b
 })
 export class BackgroundComponent implements OnInit {
   @Input() options: BackgroundOptions;
+  @Input() btnLocalization: ButtonsLocalization;
   @Input() ethnicLocalization: EthnicLocalization;
   @Input() dressLocalization: DressLocalization;
   @Input() motivationLocalization: MotivationLocalization;

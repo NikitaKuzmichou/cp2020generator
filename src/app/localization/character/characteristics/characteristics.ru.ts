@@ -42,10 +42,6 @@ export class CharacteristicsLocalizationRu implements CharacteristicsLocalizatio
     return 'Эмпатия';
   }
 
-  getGenerate() {
-    return 'Сгенерировать';
-  }
-
   getHumanity() {
     return 'Человечность';
   }

@@ -91,29 +91,31 @@
     </ul>
     <div class="text-right">
       <button (click)="changeOptionsState()" class="btn-primary">
-        {{localization.getHideOptions()}}
+        {{btnLocalization.getHideOptions()}}
       </button>
     </div>
   </ng-template>
   <ng-template #hideOptions>
     <div class="text-center h3">
       <button (click)="changeOptionsState()" class="btn btn-primary">
-        {{localization.getShowOptions()}}</button>
+        {{btnLocalization.getShowOptions()}}</button>
     </div>
   </ng-template>
 </div>
 <div class="text-right">
   <button class="btn btn-outline-success" (click)="generateInfo()" [disabled]="!hasActiveOption()">
-    {{localization.getGenerateBtn()}}
+    {{btnLocalization.getGenerate()}}
   </button>
 </div>
 
 <app-characteristics [hidden]="!options.characteristicOptions.selected"
                      [localization]="appService.getLocalization().getCharacteristicsLocalization()"
-                     [options]="options.characteristicOptions"></app-characteristics>
+                     [options]="options.characteristicOptions"
+                     [btnLocalization]="btnLocalization"></app-characteristics>
 
 <app-background [hidden]="!options.backgroundOptions.hasActiveOption()"
                 [options]="options.backgroundOptions"
+                [btnLocalization]="btnLocalization"
                 [ethnicLocalization]="appService.getLocalization().getCharacterEthnicLocalization()"
                 [dressLocalization]="appService.getLocalization().getCharacterDressLocalization()"
                 [motivationLocalization]="appService.getLocalization().getMotivationLocalization()"

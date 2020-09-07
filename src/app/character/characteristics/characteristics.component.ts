@@ -3,6 +3,7 @@ import { CharacteristicsService } from './characteristics.service';
 import { CharacteristicsOptions } from './characteristics.options';
 import { Characteristics } from './characteristics';
 import { CharacteristicsLocalization } from '../../localization/character/characteristics/characteristics';
+import { ButtonsLocalization } from '../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-characteristics',
@@ -13,6 +14,7 @@ export class CharacteristicsComponent implements OnInit {
   private service: CharacteristicsService;
   @Input() options: CharacteristicsOptions;
   @Input() localization: CharacteristicsLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   characteristics: Characteristics;
   isGenerated: boolean;
 

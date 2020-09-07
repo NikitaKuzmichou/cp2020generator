@@ -1,5 +1,6 @@
 import { LocalizationFactory } from './localization';
 import { NavLocalizationRu } from '../../localization/nav/nav.ru';
+import { ButtonsLocalizationRu } from '../../localization/buttons/buttons.ru';
 import { CharacterLocalizationRu } from '../../localization/character/character.ru';
 import { CharacteristicsLocalizationRu } from '../../localization/character/characteristics/characteristics.ru';
 import { EthnicLocalizationRu } from '../../localization/character/background/ethnic/ethnic.ru';
@@ -19,6 +20,10 @@ export class RuLocalizationFactory implements LocalizationFactory {
 
   getNavLocalization() {
     return new NavLocalizationRu();
+  }
+
+  getButtonsLocalization() {
+    return new ButtonsLocalizationRu();
   }
 
   getCharacteristicsLocalization() {

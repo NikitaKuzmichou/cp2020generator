@@ -35,9 +35,11 @@
             <div class="row" *ngIf="options.detailedGeneration">
               <app-dress [selected]="true"
                          [localization]="dressLocalization"
+                         [btnLocalization]="btnLocalization"
                          [generateAfterCreation]="true"></app-dress>
               <app-motivation [selected]="true"
                               [localization]="motivationLocalization"
+                              [btnLocalization]="btnLocalization"
                               [generateAfterCreation]="true"></app-motivation>
             </div>
             <!--Friend-->
@@ -88,9 +90,11 @@
             <div class="row" *ngIf="options.detailedGeneration">
               <app-dress [selected]="true"
                          [localization]="dressLocalization"
+                         [btnLocalization]="btnLocalization"
                          [generateAfterCreation]="true"></app-dress>
               <app-motivation [selected]="true"
                               [localization]="motivationLocalization"
+                              [btnLocalization]="btnLocalization"
                               [generateAfterCreation]="true"></app-motivation>
             </div>
             <!--Tragic love-->
@@ -116,6 +120,6 @@
   </div>
 
   <div class="btn btn-outline-primary" (click)="onGenerate()">
-    {{localization.getGenerate()}}
+    {{btnLocalization.getGenerate()}}
   </div>
 </div>

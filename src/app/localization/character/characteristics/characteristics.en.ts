@@ -42,10 +42,6 @@ export class CharacteristicsLocalizationEn implements CharacteristicsLocalizatio
     return 'Empathy';
   }
 
-  getGenerate() {
-    return 'Generate';
-  }
-
   getHumanity() {
     return 'Humanity';
   }

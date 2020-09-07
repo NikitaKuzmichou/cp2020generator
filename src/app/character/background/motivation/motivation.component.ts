@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Dice } from '../../../service/dices/dice';
 import { DiceD10 } from '../../../service/dices/dice.d10';
 import { MotivationLocalization } from '../../../localization/character/background/motivations/motivation';
+import { ButtonsLocalization } from '../../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-motivation',
@@ -13,6 +14,7 @@ export class MotivationComponent implements OnInit {
   private d10: Dice;
   @Input() selected: boolean;
   @Input() localization: MotivationLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   @Input() generateAfterCreation: boolean;
   isGenerated: boolean;
 

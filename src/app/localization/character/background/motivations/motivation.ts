@@ -2,7 +2,6 @@ import { Localization } from '../../../localization';
 
 export interface MotivationLocalization extends Localization {
   getHeader();
-  getGenerate();
   getPersonalTraits();
   getPersonTraitByRoll(roll: number);
   getValuePerson();

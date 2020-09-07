@@ -19,5 +19,4 @@ export interface CharacteristicsLocalization extends Localization {
   getDependCharacteristics();
   getHumanity();
   getBtm();
-  getGenerate();
 }

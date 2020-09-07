@@ -2,9 +2,6 @@ import { FamilyLocalization } from './family';
 import { AppLanguage } from '../../../../app.language';
 
 export class FamilyLocalizationRu implements FamilyLocalization {
-  getGenerate() {
-    return 'Сгенерировать';
-  }
 
   getHeader() {
     return 'Предыстория семьи';

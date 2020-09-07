@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FamilyService } from './family.service';
 import { FamilyRolls } from './family.rolls';
 import { FamilyLocalization } from '../../../localization/character/background/family/family';
+import { ButtonsLocalization } from '../../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-family',
@@ -13,6 +14,7 @@ export class FamilyComponent implements OnInit {
   private rolls: FamilyRolls;
   @Input() selected: boolean;
   @Input() localization: FamilyLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   isGenerated: boolean;
 
   constructor() { }

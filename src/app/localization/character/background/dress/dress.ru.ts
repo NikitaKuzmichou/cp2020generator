@@ -10,10 +10,6 @@ export class DressLocalizationRu implements DressLocalization {
     return 'Одежда и индивидуальный стиль';
   }
 
-  getGenerate() {
-    return 'Сгенерировать';
-  }
-
   getClothes() {
     return 'Одежда';
   }

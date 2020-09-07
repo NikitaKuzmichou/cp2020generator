@@ -3,7 +3,6 @@ import { Localization } from '../localization';
 export interface CharacterLocalization extends Localization {
   getHeader();
   getOptionsHeader();
-  getShowOptions();
   getName();
   getCharacteristics();
   getBackground();
@@ -17,6 +16,4 @@ export interface CharacterLocalization extends Localization {
   getSkills();
   getDetailedGeneration();
   getNothingHappened();
-  getGenerateBtn();
-  getHideOptions();
 }

@@ -1,7 +1,6 @@
 import { Localization } from '../../../localization';
 
-export interface EventsLocalization extends Localization{
-  getGenerate();
+export interface EventsLocalization extends Localization {
   getHeader();
   getAge();
   getEvents();

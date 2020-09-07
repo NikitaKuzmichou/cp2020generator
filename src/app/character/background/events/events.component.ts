@@ -16,6 +16,7 @@ import { DressComponent } from '../dress/dress.component';
 import { DressLocalization } from '../../../localization/character/background/dress/dress';
 import { MotivationComponent } from '../motivation/motivation.component';
 import { MotivationLocalization } from '../../../localization/character/background/motivations/motivation';
+import { ButtonsLocalization } from '../../../localization/buttons/buttons';
 
 @Component({
   selector: 'app-events',
@@ -26,6 +27,7 @@ export class EventsComponent implements OnInit {
   private service: LifeEventsService;
   @Input() options: LifeEventsOptions;
   @Input() localization: EventsLocalization;
+  @Input() btnLocalization: ButtonsLocalization;
   @Input() romanticLocalization: RomanticEventsLocalization;
   @Input() problAndWinsLocalization: ProblemsWinsEventsLocalization;
   @Input() nothHappLocalization: NothingHappenedEventsLocalization;

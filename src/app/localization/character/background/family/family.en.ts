@@ -2,9 +2,6 @@ import { FamilyLocalization } from './family';
 import { AppLanguage } from '../../../../app.language';
 
 export class FamilyLocalizationEn implements FamilyLocalization {
-  getGenerate() {
-    return 'Generate';
-  }
 
   getHeader() {
     return 'Family Background';

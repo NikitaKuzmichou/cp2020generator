@@ -7,7 +7,6 @@ import { LocalizationFactory } from './factories/localization/localization';
     providedIn: 'root',
   })
 export class AppService {
-
   language: AppLanguage;
   localizationFactory: LocalizationFactory;
 
