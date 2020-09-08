@@ -1,45 +1,50 @@
 <div class="container family text-center" [hidden]="!(isGenerated && selected)">
   <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
-  <table class="table table-striped table-borderless">
-    <tr>
-      <th>{{localization.getRanking()}}</th>
-      <td>{{getFamilyRanking()}}</td>
-    </tr>
-    <tr>
-      <th>{{localization.getParents()}}</th>
-      <td>{{getParents()}}</td>
-    </tr>
-    <tr [hidden]="!isSomethingHapped()">
-      <th>{{localization.getHappedEvent()}}</th>
-      <td>{{getSomethingHapped()}}</td>
-    </tr>
-    <tr>
-      <th>{{localization.getStatus()}}</th>
-      <td>{{getStatus()}}</td>
-    </tr>
-    <tr [hidden]="!isTragedyEvent()">
-      <th>{{localization.getTragedy()}}</th>
-      <td>{{getTragedy()}}</td>
-    </tr>
-    <tr>
-      <th>{{localization.getChildEnv()}}</th>
-      <td>{{getChildEnv()}}</td>
-    </tr>
-    <tr>
-      <th>{{localization.getSibling()}}</th>
-      <td>{{getNumSiblings()}}</td>
-    </tr>
-  </table>
-  <span *ngFor="let sibling of getSiblings(); index as i">
+  <div class="family-details">
+    <div class="row">
+      <div class="col-sm h6">{{localization.getRanking()}}</div>
+      <div class="col h6">{{localization.getParents()}}</div>
+      <div class="col h6" [hidden]="!isSomethingHapped()">
+        {{localization.getHappedEvent()}}
+      </div>
+      <div class="col h6">{{localization.getStatus()}}</div>
+      <div class="col h6" [hidden]="!isTragedyEvent()">
+        {{localization.getTragedy()}}
+      </div>
+      <div class="col h6">{{localization.getChildEnv()}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm">{{getFamilyRanking()}}</div>
+      <div class="col">{{getParents()}}</div>
+      <div class="col" [hidden]="!isSomethingHapped()">
+        {{getSomethingHapped()}}
+      </div>
+      <div class="col">{{getStatus()}}</div>
+      <div class="col" [hidden]="!isTragedyEvent()">
+        {{getTragedy()}}
+      </div>
+      <div class="col">{{getChildEnv()}}</div>
+    </div>
+  </div>
+  <br>
+  <div class="family-siblings">
+    <div class="row">
+      <div class="col-sm h6">{{localization.getSibling()}}</div>
+      <div class="col">{{getNumSiblings()}}</div>
+    </div>
+    <span *ngFor="let sibling of getSiblings(); index as i">
     <div class="row">
       <div class="col">{{getSiblingGender(i)}}</div><br>
       <div class="col">{{getSiblingAge(i)}}</div><br>
       <div class="col">{{getSiblingFeelings(i)}}</div><br>
     </div>
   </span>
+  </div>
 
-  <div class="btn btn-outline-primary" (click)="onGenerate()">
-    {{btnLocalization.getGenerate()}}
+  <div class="text-right">
+    <div class="btn btn-outline-primary" (click)="onGenerate()">
+      {{btnLocalization.getGenerate()}}
+    </div>
   </div>
 </div>

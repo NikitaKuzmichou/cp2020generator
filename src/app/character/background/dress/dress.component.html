@@ -1,24 +1,22 @@
 <div class="container dress text-center" [hidden]="!(isGenerated && selected)">
   <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
-  <table class="table table-striped table-borderless">
-    <thead>
-    <tr>
-      <th>{{localization.getClothes()}}</th>
-      <th>{{localization.getHairstyle()}}</th>
-      <th>{{localization.getAffectations()}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>{{getClothes()}}</td>
-      <td>{{getHairstyle()}}</td>
-      <td>{{getAffectations()}}</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="dress-details">
+    <div class="row">
+      <div class="col h6">{{localization.getClothes()}}</div>
+      <div class="col h6">{{localization.getHairstyle()}}</div>
+      <div class="col h6">{{localization.getAffectations()}}</div>
+    </div>
+    <div class="row">
+      <div class="col">{{getClothes()}}</div>
+      <div class="col">{{getHairstyle()}}</div>
+      <div class="col">{{getAffectations()}}</div>
+    </div>
+  </div>
 
-  <div class="btn btn-outline-primary" (click)="onGenerate()">
-    {{btnLocalization.getGenerate()}}
+  <div class="text-right">
+    <div class="btn btn-outline-primary" (click)="onGenerate()">
+      {{btnLocalization.getGenerate()}}
+    </div>
   </div>
 </div>

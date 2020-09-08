@@ -1,93 +1,75 @@
 <div class="container skills text-center" [hidden]="!(isGenerated && options.selected)">
-  <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
-  <table class="table table-borderless">
-    <tbody class="bg-light">
-      <tr>
-        <th scope="row">{{localization.getCharacteristics()}}</th>
-        <td>
-          <div class="bg-info text-white">{{localization.getInt()}}</div>
-          <br>
-          <div>{{characteristics.int}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getTech()}}</div>
-          <br>
-          <div>{{characteristics.tech}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getCool()}}</div>
-          <br>
-          <div>{{characteristics.cool}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getRef()}}</div>
-          <br>
-          <div>{{characteristics.ref}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getAttr()}}</div>
-          <br>
-          <div>{{characteristics.attr}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getLuck()}}</div>
-          <br>
-          <div>{{characteristics.luck}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getMa()}}</div>
-          <br>
-          <div>{{characteristics.ma}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getEmp()}}</div>
-          <br>
-          <div>{{characteristics.emp}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getBody()}}</div>
-          <br>
-          <div>{{characteristics.body}}</div>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">{{localization.getDependCharacteristics()}}</th>
-        <td>
-          <div class="bg-info text-white">{{localization.getRun()}}</div>
-          <br>
-          <div>{{characteristics.run}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getLeap()}}</div>
-          <br>
-          <div>{{characteristics.leap}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getBtm()}}</div>
-          <br>
-          <div>{{characteristics.btm}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getCarry()}}</div>
-          <br>
-          <div>{{characteristics.carry}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getLift()}}</div>
-          <br>
-          <div>{{characteristics.lift}}</div>
-        </td>
-        <td>
-          <div class="bg-info text-white">{{localization.getHumanity()}}</div>
-          <br>
-          <div>{{characteristics.humanity}}</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="skills-details">
+    <div class="h5">
+      {{localization.getCharacteristics()}}
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getInt()}}</div>
+      <div class="col">{{characteristics.int}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getTech()}}</div>
+      <div class="col">{{characteristics.tech}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getCool()}}</div>
+      <div class="col">{{characteristics.cool}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getRef()}}</div>
+      <div class="col">{{characteristics.ref}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getAttr()}}</div>
+      <div class="col">{{characteristics.attr}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getLuck()}}</div>
+      <div class="col">{{characteristics.luck}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getMa()}}</div>
+      <div class="col">{{characteristics.ma}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getEmp()}}</div>
+      <div class="col">{{characteristics.emp}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getBody()}}</div>
+      <div class="col">{{characteristics.body}}</div>
+    </div>
+    <div class="h5">{{localization.getDependCharacteristics()}}</div>
+    <div class="row">
+      <div class="col h6">{{localization.getRun()}}</div>
+      <div class="col">{{characteristics.run}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getLeap()}}</div>
+      <div class="col">{{characteristics.leap}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getBtm()}}</div>
+      <div class="col">{{characteristics.btm}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getCarry()}}</div>
+      <div class="col">{{characteristics.carry}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getLift()}}</div>
+      <div class="col">{{characteristics.lift}}</div>
+    </div>
+    <div class="row">
+      <div class="col h6">{{localization.getHumanity()}}</div>
+      <div class="col">{{characteristics.humanity}}</div>
+    </div>
+  </div>
 
-  <div class="btn btn-outline-primary" (click)="onGenerate()">
-    {{btnLocalization.getGenerate()}}
+  <div class="text-right">
+    <div class="btn btn-outline-primary" (click)="onGenerate()">
+      {{btnLocalization.getGenerate()}}
+    </div>
   </div>
 </div>

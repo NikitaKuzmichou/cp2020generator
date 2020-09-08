@@ -1,34 +1,32 @@
 <div class="container motivation text-center" [hidden]="!(isGenerated && selected)">
   <div class="bg-success text-white">{{localization.getHeader()}}</div>
 
-  <ul class="list-unstyled">
-    <li class="h6 text-center bg-light">
-      {{localization.getPersonalTraits()}}
-    </li>
-    <li>{{getPersonTraits()}}</li>
+  <div class="motivation-details">
+    <div class="row">
+      <div class="col-sm h6">{{localization.getPersonalTraits()}}</div>
+      <div class="col">{{getPersonTraits()}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm h6">{{localization.getValuePerson()}}</div>
+      <div class="col">{{getPersonValue()}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm h6">{{localization.getValueMost()}}</div>
+      <div class="col">{{getValueMost()}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm h6">{{localization.getFeelAboutPeople()}}</div>
+      <div class="col">{{getFeelAboutPeople()}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm h6">{{localization.getValuedPossession()}}</div>
+      <div class="col">{{getValuePossession()}}</div>
+    </div>
+  </div>
 
-    <li class="h6 text-center bg-light">
-      {{localization.getValuePerson()}}
-    </li>
-    <li>{{getPersonValue()}}</li>
-
-    <li class="h6 text-center bg-light">
-      {{localization.getValueMost()}}
-    </li>
-    <li>{{getValueMost()}}</li>
-
-    <li class="h6 text-center bg-light">
-      {{localization.getFeelAboutPeople()}}
-    </li>
-    <li>{{getFeelAboutPeople()}}</li>
-
-    <li class="h6 text-center bg-light">
-      {{localization.getValuedPossession()}}
-    </li>
-    <li>{{getValuePossession()}}</li>
-  </ul>
-
-  <div class="btn btn-outline-primary" (click)="onGenerate()">
-    {{btnLocalization.getGenerate()}}
+  <div class="text-right">
+    <div class="btn btn-outline-primary" (click)="onGenerate()">
+      {{btnLocalization.getGenerate()}}
+    </div>
   </div>
 </div>
