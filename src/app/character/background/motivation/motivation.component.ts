@@ -16,6 +16,7 @@ export class MotivationComponent implements OnInit {
   @Input() localization: MotivationLocalization;
   @Input() btnLocalization: ButtonsLocalization;
   @Input() generateAfterCreation: boolean;
+  @Input() hideHeaderAndBtn: boolean;
   isGenerated: boolean;
 
   constructor() { }

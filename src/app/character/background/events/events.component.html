@@ -1,19 +1,19 @@
 <div class="container events text-center" [hidden]="!(isGenerated && options.selected)">
 
-  <div class="text-center">
-    <div class="row">
+  <div class="events-details">
+    <div class="h4">
       {{localization.getHeader()}}
     </div>
     <div class="row">
-      <div class="col">{{localization.getAge()}}</div>
-      <div class="col">{{localization.getDescription()}}</div>
+      <div class="col h5">{{localization.getAge()}}</div>
+      <div class="col h5">{{localization.getDescription()}}</div>
     </div>
     <div *ngFor="let event of events">
       <div class="row">
-        <div class="col-sm">{{event.age}}</div>
+        <div class="col-sm h6">{{event.age}}</div>
         <div class="col-lg">
           <!--Big wins big problems-->
-          <div *ngIf="resolver.isProblemsWinsEvent(event)">
+          <div class="problems_wins" *ngIf="resolver.isProblemsWinsEvent(event)">
             <!--Disaster-->
             <span *ngIf="resolver.isDisasterEvent(event); else luck">
               <div class="row h6">{{problAndWinsLocalization.getDisaster()}}</div>
@@ -28,7 +28,7 @@
             </ng-template>
           </div>
           <!--Friends and enemies-->
-          <div *ngIf="resolver.isFriendsEnemiesEvent(event)">
+          <div class="friends_enemies"*ngIf="resolver.isFriendsEnemiesEvent(event)">
             <div class="row h6">{{friendsEnemLocalization.getHeader()}}</div>
             <div class="row h6">{{friendsEnemLocalization.getFriendEnemy(event.getRoll(0))}}</div>
             <div class="row">{{friendsEnemLocalization.getFriendsEnemiesByRoll(event.getRoll(1))}}</div>
@@ -36,11 +36,13 @@
               <app-dress [selected]="true"
                          [localization]="dressLocalization"
                          [btnLocalization]="btnLocalization"
-                         [generateAfterCreation]="true"></app-dress>
+                         [generateAfterCreation]="true"
+                         [hideHeaderAndBtn]="true"></app-dress>
               <app-motivation [selected]="true"
                               [localization]="motivationLocalization"
                               [btnLocalization]="btnLocalization"
-                              [generateAfterCreation]="true"></app-motivation>
+                              [generateAfterCreation]="true"
+                              [hideHeaderAndBtn]="true"></app-motivation>
             </div>
             <!--Friend-->
             <div *ngIf="resolver.isFriend(event)">
@@ -82,7 +84,7 @@
             </div>
           </div>
           <!--Romantic life-->
-          <div *ngIf="resolver.isRomanticEvent(event)">
+          <div class="romantic" *ngIf="resolver.isRomanticEvent(event)">
             <div class="row h6">{{romanticLocalization.getHeader()}}</div>
             <div class="row h6">{{romanticLocalization.getHowWorked()}}</div>
             <div class="row">{{romanticLocalization.getHowWorkedByRoll(event.getRoll(0))}}</div>
@@ -91,11 +93,13 @@
               <app-dress [selected]="true"
                          [localization]="dressLocalization"
                          [btnLocalization]="btnLocalization"
-                         [generateAfterCreation]="true"></app-dress>
+                         [generateAfterCreation]="true"
+                         [hideHeaderAndBtn]="true"></app-dress>
               <app-motivation [selected]="true"
                               [localization]="motivationLocalization"
                               [btnLocalization]="btnLocalization"
-                              [generateAfterCreation]="true"></app-motivation>
+                              [generateAfterCreation]="true"
+                              [hideHeaderAndBtn]="true"></app-motivation>
             </div>
             <!--Tragic love-->
             <span *ngIf="resolver.isTragicLove(event)">
@@ -111,7 +115,7 @@
             </span>
           </div>
           <!--Nothing happened that year-->
-          <div *ngIf="resolver.isNothingHappenedEvent(event)">
+          <div class="nothing" *ngIf="resolver.isNothingHappenedEvent(event)">
             <div class="row h6">{{nothHappLocalization.getHeader()}}</div>
           </div>
         </div>

@@ -17,6 +17,7 @@ export class DressComponent implements OnInit {
   @Input() localization: DressLocalization;
   @Input() btnLocalization: ButtonsLocalization;
   @Input() generateAfterCreation: boolean;
+  @Input() hideHeaderAndBtn: boolean;
   isGenerated: boolean;
 
   constructor() {
