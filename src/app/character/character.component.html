@@ -1,12 +1,12 @@
 <span *ngIf="isLanguageChanged() then updateLocalization()"></span>
-<div class="card-header h2">
+<div class="generation__h text">
   {{localization.getHeader()}}
 </div>
 
 <div class="options">
   <span *ngIf="onShowOptions(); then showOptions else hideOptions"></span>
   <ng-template #showOptions>
-    <div class="options-header h3 text-center">{{localization.getOptionsHeader()}}</div>
+    <div class="options__h text text-center">{{localization.getOptionsHeader()}}</div>
     <ul class="list-group text-center">
       <li class="list-group-item">
         <label for="select-generate-name">

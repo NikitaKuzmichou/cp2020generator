@@ -3,7 +3,7 @@
     <div class="language row">
       <div class="col">
         <div class="text-right">
-          <select class="btn__select" (change)="setLocalization($event.target.value)">
+          <select class="btn__select text" (change)="setLocalization($event.target.value)">
             <option [ngValue]="getEnglishLang()">{{getEnglishLang()}}</option>
             <option [ngValue]="getRuLang()">{{getRuLang()}}</option>
           </select>
@@ -12,25 +12,25 @@
     </div>
     <div class="row nav">
       <div class="col btn">
-         <a routerLink="/character" class="btn__content">
+         <a routerLink="/character" class="btn__content text">
            {{navLocal.getCharacter()}}
          </a>
         <span class="btn__glitch"></span>
       </div>
       <div class="col btn">
-        <a routerLink="/in-progress" class="btn__content">
+        <a routerLink="/in-progress" class="btn__content text">
           {{navLocal.getImplants()}}
         </a>
         <span class="btn__glitch"></span>
       </div>
       <div class="col btn">
-        <a routerLink="/in-progress" class="btn__content">
+        <a routerLink="/in-progress" class="btn__content text">
           {{navLocal.getWeapon()}}
         </a>
         <span class="btn__glitch"></span>
       </div>
       <div class="col btn">
-        <a routerLink="/in-progress" class="btn__content">
+        <a routerLink="/in-progress" class="btn__content text">
           {{navLocal.getNpc()}}
         </a>
         <span class="btn__glitch"></span>

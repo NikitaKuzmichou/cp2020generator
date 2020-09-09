@@ -22,6 +22,14 @@ select {
   outline: none;
 }
 
+.text {
+  font-family: Tomorrow, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .95rem;
+}
+
 .btn {
   width: 230px;
   height: 60px;
@@ -30,9 +38,6 @@ select {
   background-color: var(--black-color);
   cursor: pointer;
   position: relative;
-  font-family: Tomorrow, sans-serif;
-  font-size: .85rem;
-  text-transform: uppercase;
   color: var(--black-color);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }

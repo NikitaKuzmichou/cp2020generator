@@ -1,0 +1,13 @@
+@import "../../styles.css";
+
+.generation__h {
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+.options__h {
+  font-size: 1.75rem;
+  text-transform: lowercase;
+  font-weight: 500;
+  color: var(--white-color);
+}
