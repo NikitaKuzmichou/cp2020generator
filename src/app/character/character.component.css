@@ -1,13 +1,84 @@
 @import "../../styles.css";
+@import "../app.component.css";
+
+i {
+  border: solid var(--neon-color);
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 7px;
+  margin-right: -98%;
+}
 
 .generation__h {
   font-size: 2rem;
-  color: var(--white-color);
+  color: var(--blue-color);
 }
 
 .options__h {
   font-size: 1.75rem;
   text-transform: lowercase;
   font-weight: 500;
-  color: var(--white-color);
+  color: var(--blue-color);
+  background-color: var(--dark-neon-color);
+}
+
+.options__events {
+  height: 60px;
+  color: var(--neon-color);
+  border-color: var(--black-color);
+}
+
+.arrow__up {
+  margin-top: 15px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow__down {
+  margin-top: 8px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.btn__rounded {
+  border-radius: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn_content__rounded {
+  width: 100%;
+  border-radius: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.row {
+  padding: 10px;
+}
+
+.gradient__row_1 {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: linear-gradient(to bottom, #f8d545, #f4cb3d);
+}
+
+.gradient__row_2 {
+  background: linear-gradient(to bottom, #f4cb3d, #f4bc4f);
+}
+
+.gradient__row_3 {
+  background: linear-gradient(to bottom, #f4bc4f, #e29253);
+}
+
+.gradient__row_4 {
+  background: linear-gradient(to bottom, #e29253, #e27271);
+}
+
+.gradient__row_5 {
+  background: linear-gradient(to bottom, #e27271, #d74a74);
+}
+
+.gradient__row_6 {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to bottom, #d74a74, #e21f47);
 }

@@ -13,13 +13,13 @@ import { ButtonsLocalization } from '../localization/buttons/buttons';
   styleUrls: ['./character.component.css'],
 })
 export class CharacterComponent implements OnInit {
-  private showOptions: boolean;
   @ViewChild(CharacteristicsComponent)
   private characteristics: CharacteristicsComponent;
   @ViewChild(BackgroundComponent)
   private background: BackgroundComponent;
   localization: CharacterLocalization;
   btnLocalization: ButtonsLocalization;
+  showOptions: boolean;
   options: GenerationOptions;
 
   constructor(public appService: AppService) {}
@@ -53,7 +53,6 @@ export class CharacterComponent implements OnInit {
   }
 
   generateInfo() {
-    /**TODO*/
     this.characteristics.onGenerate();
     this.background.onGenerate();
   }

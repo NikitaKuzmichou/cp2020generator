@@ -5,7 +5,7 @@
 }
 
 nav {
-  background-color: var(--blue-color);
+  background: linear-gradient(to bottom, var(--dark-blue-color), var(--purple-color));
 }
 
 .row {
@@ -133,6 +133,3 @@ nav {
     opacity: 1;
   }
 }
-
-
-
