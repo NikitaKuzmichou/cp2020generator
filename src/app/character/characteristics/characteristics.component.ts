@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CharacteristicsService } from './service/characteristics.service';
-import { CharacteristicsOptions } from './service/characteristics.options';
 import { Characteristics } from './service/characteristics';
+import { CharacteristicsOptions } from './service/characteristics.options';
+import { CharacteristicsGenerator } from './service/characteristics.generator';
 import { CharacteristicsLocalization } from '../../localization/character/characteristics/characteristics';
 import { ButtonsLocalization } from '../../localization/buttons/buttons';
 
@@ -11,46 +11,28 @@ import { ButtonsLocalization } from '../../localization/buttons/buttons';
   styleUrls: ['./characteristics.component.css']
 })
 export class CharacteristicsComponent implements OnInit {
-  private service: CharacteristicsService;
+  private generator: CharacteristicsGenerator;
   @Input() options: CharacteristicsOptions;
   @Input() localization: CharacteristicsLocalization;
   @Input() btnLocalization: ButtonsLocalization;
   characteristics: Characteristics;
   isGenerated: boolean;
 
-  /**TODO*/
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.service = new CharacteristicsService();
-    this.isGenerated = false;
+    this.generator = new CharacteristicsGenerator();
     this.characteristics = new Characteristics();
+    this.isGenerated = false;
   }
 
   onGenerate() {
     if (this.options.selected) {
-      this.generateCharacteristics();
+      this.isGenerated = true;
+      this.characteristics = this.generator.generateCharacteristics();
     } else {
       return false;
     }
-  }
-
-  private generateCharacteristics() {
-    this.isGenerated = true;
-    this.characteristics.attr = this.service.generateCharacteristic();
-    this.characteristics.body = this.service.generateCharacteristic();
-    this.characteristics.tech = this.service.generateCharacteristic();
-    this.characteristics.ref = this.service.generateCharacteristic();
-    this.characteristics.ma = this.service.generateCharacteristic();
-    this.characteristics.luck = this.service.generateCharacteristic();
-    this.characteristics.int = this.service.generateCharacteristic();
-    this.characteristics.emp = this.service.generateCharacteristic();
-    this.characteristics.cool = this.service.generateCharacteristic();
-    this.characteristics.btm = this.service.getBtm(this.characteristics.body);
-    this.characteristics.carry = this.service.getCarry(this.characteristics.body);
-    this.characteristics.lift = this.service.getLift(this.characteristics.body);
-    this.characteristics.run = this.service.getRun(this.characteristics.ma);
-    this.characteristics.leap = this.service.getLeap(this.characteristics.run);
-    this.characteristics.humanity = this.service.getHumanity(this.characteristics.emp);
   }
 }
