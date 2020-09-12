@@ -15,11 +15,19 @@ export class FriendsEnemiesEventsLocalizationEn implements FriendsEnemiesEventsL
     }
   }
 
-  getFriendsEnemiesByRoll(roll: number) {
+  getFriendsEnemiesGender(roll: number) {
     if (roll % 2 === 0) {
-      return 'It\'s a male. His personal style and motivation';
+      return 'It\'s a male';
     } else {
-      return 'It\'s a woman. Her personal style and motivation';
+      return 'It\'s a woman';
+    }
+  }
+
+  getGeneratedPerson(roll: number) {
+    if (roll % 2 === 0) {
+      return 'his personal style and motivation:';
+    } else {
+      return 'her personal style and motivation:';
     }
   }
 

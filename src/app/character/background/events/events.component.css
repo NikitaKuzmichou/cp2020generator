@@ -1,1 +1,5 @@
 @import "../background.component.css";
+
+.events__year {
+  background: var(--neon-light-color);
+}

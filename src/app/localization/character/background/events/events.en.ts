@@ -21,4 +21,8 @@ export class EventsLocalizationEn implements EventsLocalization {
   getDescription() {
     return 'For each year lived after 16 years occurs one event';
   }
+
+  getAnotherYear() {
+    return 'Another year';
+  }
 }

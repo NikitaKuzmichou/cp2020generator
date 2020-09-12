@@ -21,4 +21,8 @@ export class EventsLocalizationRu implements EventsLocalization {
   getDescription() {
     return 'За каждый прожитый после 16 лет год происходит по одному событию';
   }
+
+  getAnotherYear() {
+    return 'Ещё один год';
+  }
 }

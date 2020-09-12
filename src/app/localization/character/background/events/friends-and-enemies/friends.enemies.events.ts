@@ -3,7 +3,8 @@ import { Localization } from '../../../../localization';
 export interface FriendsEnemiesEventsLocalization extends Localization {
   getHeader();
   getFriendEnemy(roll: number);
-  getFriendsEnemiesByRoll(roll: number);
+  getFriendsEnemiesGender(roll: number);
+  getGeneratedPerson(roll: number);
   getFriend();
   getFriendByRoll(roll: number);
   getEnemy();

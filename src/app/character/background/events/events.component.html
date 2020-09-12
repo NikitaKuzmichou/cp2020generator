@@ -9,6 +9,9 @@
       <div class="col bg__col">{{localization.getDescription()}}</div>
     </div>
     <div *ngFor="let event of events">
+      <div class="row events__year justify-content-center">
+        {{localization.getAnotherYear()}}
+      </div>
       <div class="row ">
         <div class="col-1 bg__h_1">{{event.age}}</div>
         <div class="col">
@@ -47,9 +50,11 @@
             </div>
             <div class="row justify-content-center">
               <div class="col bg__h_1">
-                {{friendsEnemLocalization.getFriendEnemy(event.getRoll(0))
-                  + ' ' +
-                  friendsEnemLocalization.getFriendsEnemiesByRoll(event.getRoll(1))}}
+                {{friendsEnemLocalization.getFriendEnemy(event.getRoll(0)) + '. ' +
+                  friendsEnemLocalization.getFriendsEnemiesGender(event.getRoll(1))}}
+                <span *ngIf="options.detailedGeneration">
+                  {{' ' + friendsEnemLocalization.getGeneratedPerson(event.getRoll(1))}}
+                </span>
               </div>
             </div>
             <div class="row bg__col" *ngIf="options.detailedGeneration">
@@ -136,9 +141,9 @@
                 {{romanticLocalization.getHowWorkedByRoll(event.getRoll(0))}}
               </div>
             </div>
-            <div class="row">
+            <div class="row" *ngIf="options.detailedGeneration">
               <div class="col bg__h_1">{{romanticLocalization.getGeneratedPerson()}}</div>
-              <div class="col bg__col" *ngIf="options.detailedGeneration">
+              <div class="col bg__col">
                 <app-dress [selected]="true"
                            [localization]="dressLocalization"
                            [btnLocalization]="btnLocalization"

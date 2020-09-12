@@ -14,7 +14,7 @@ export class FriendsEnemiesGenerate {
     lifeEvent.addRoll(this.d10.roll());
     //roll for gender
     lifeEvent.addRoll(this.d10.roll());
-    if (lifeEvent.getRoll(0) < 6) {
+    if (lifeEvent.getRoll(1) < 6) {
       //friend roll
       lifeEvent.addRoll(this.d10.roll());
     } else {

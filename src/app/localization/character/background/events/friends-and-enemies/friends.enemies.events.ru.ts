@@ -15,11 +15,19 @@ export class FriendsEnemiesEventsLocalizationRu implements FriendsEnemiesEventsL
     }
   }
 
-  getFriendsEnemiesByRoll(roll: number) {
+  getFriendsEnemiesGender(roll: number) {
     if (roll % 2 === 0) {
-      return 'Это мужчина. Его внешний вид и мотивация:';
+      return 'Это мужчина';
     } else {
-      return 'Это женщина. Её внешний вид и мотивация';
+      return 'Это женщина';
+    }
+  }
+
+  getGeneratedPerson(roll: number) {
+    if (roll % 2 === 0) {
+      return 'его внешний вид и мотивация:';
+    } else {
+      return 'её внешний вид и мотивация';
     }
   }
 

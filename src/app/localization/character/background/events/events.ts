@@ -5,4 +5,5 @@ export interface EventsLocalization extends Localization {
   getAge();
   getEvents();
   getDescription();
+  getAnotherYear();
 }
