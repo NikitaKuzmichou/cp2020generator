@@ -1,0 +1,48 @@
+@import "../../../styles.css";
+
+.bg__elem {
+  padding: 10px;
+}
+
+.bg__details {
+  padding: 10px;
+}
+
+.bg__h {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: var(--blue-color);
+}
+
+.text {
+  color: var(--white-color);
+}
+
+.bg__h_1 {
+  border: solid 5px var(--black-color);
+  background-color: var(--dark-blue-color);
+}
+
+.bg__col {
+  border: solid 5px var(--black-color);
+  background-color: var(--blue-metal-color);
+}
+
+.btn__content {
+  background-color: transparent;
+  border: transparent;
+}
+
+.btn {
+  background-color: #AD18C9;
+  border-color: var(--red-color);
+  padding: 10px;
+}
+
+.btn__content {
+  width: 100%;
+}
+
+.btn__content:hover {
+  background-color: #BB39C9;
+}

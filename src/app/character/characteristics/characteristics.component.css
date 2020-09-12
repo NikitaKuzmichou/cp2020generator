@@ -36,7 +36,7 @@
 }
 
 .btn {
-  background-color: #ad18c9;
+  background-color: #AD18C9;
   border-color: var(--red-color);
 }
 
@@ -45,5 +45,5 @@
 }
 
 .btn__content:hover {
-  background-color: var(--blue-metal-color);
+  background-color: #BB39C9;
 }

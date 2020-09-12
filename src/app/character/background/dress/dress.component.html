@@ -1,22 +1,24 @@
-<div class="container dress text-center" [hidden]="!(isGenerated && selected)">
-  <div class="bg-success text-white" [hidden]="hideHeaderAndBtn">{{localization.getHeader()}}</div>
+<div class="container bg__elem text-center" [hidden]="!(isGenerated && selected)">
 
-  <div class="dress-details">
+  <div class="bg__details text">
+    <div class="bg__h" [hidden]="hideHeaderAndBtn">{{localization.getHeader()}}</div>
     <div class="row">
-      <div class="col h6">{{localization.getClothes()}}</div>
-      <div class="col h6">{{localization.getHairstyle()}}</div>
-      <div class="col h6">{{localization.getAffectations()}}</div>
+      <div class="col bg__h_1">{{localization.getClothes()}}</div>
+      <div class="col bg__h_1">{{localization.getHairstyle()}}</div>
+      <div class="col bg__h_1">{{localization.getAffectations()}}</div>
     </div>
     <div class="row">
-      <div class="col">{{getClothes()}}</div>
-      <div class="col">{{getHairstyle()}}</div>
-      <div class="col">{{getAffectations()}}</div>
+      <div class="col bg__col">{{getClothes()}}</div>
+      <div class="col bg__col">{{getHairstyle()}}</div>
+      <div class="col bg__col">{{getAffectations()}}</div>
     </div>
   </div>
 
-  <div class="text-right" [hidden]="hideHeaderAndBtn">
-    <div class="btn btn-outline-primary" (click)="onGenerate()">
-      {{btnLocalization.getGenerate()}}
+  <div class="row row-cols-1 justify-content-end" [hidden]="hideHeaderAndBtn">
+    <div class="col-2 btn">
+      <button class="text btn__content" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
     </div>
   </div>
 </div>

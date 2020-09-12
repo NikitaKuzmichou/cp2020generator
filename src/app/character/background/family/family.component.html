@@ -1,50 +1,52 @@
-<div class="container family text-center" [hidden]="!(isGenerated && selected)">
-  <div class="bg-success text-white">{{localization.getHeader()}}</div>
+<div class="container bg__elem text-center" [hidden]="!(isGenerated && selected)">
 
-  <div class="family-details">
+  <div class="bg__details text align-content-center">
+    <div class="bg__h">{{localization.getHeader()}}</div>
     <div class="row">
-      <div class="col-sm h6">{{localization.getRanking()}}</div>
-      <div class="col h6">{{localization.getParents()}}</div>
-      <div class="col h6" [hidden]="!isSomethingHapped()">
+      <div class="col bg__h_1">{{localization.getRanking()}}</div>
+      <div class="col bg__h_1">{{localization.getParents()}}</div>
+      <div class="col bg__h_1" [hidden]="!isSomethingHapped()">
         {{localization.getHappedEvent()}}
       </div>
-      <div class="col h6">{{localization.getStatus()}}</div>
-      <div class="col h6" [hidden]="!isTragedyEvent()">
+      <div class="col bg__h_1">{{localization.getStatus()}}</div>
+      <div class="col bg__h_1" [hidden]="!isTragedyEvent()">
         {{localization.getTragedy()}}
       </div>
-      <div class="col h6">{{localization.getChildEnv()}}</div>
+      <div class="col bg__h_1">{{localization.getChildEnv()}}</div>
     </div>
     <div class="row">
-      <div class="col-sm">{{getFamilyRanking()}}</div>
-      <div class="col">{{getParents()}}</div>
-      <div class="col" [hidden]="!isSomethingHapped()">
+      <div class="col bg__col">{{getFamilyRanking()}}</div>
+      <div class="col bg__col">{{getParents()}}</div>
+      <div class="col bg__col" [hidden]="!isSomethingHapped()">
         {{getSomethingHapped()}}
       </div>
-      <div class="col">{{getStatus()}}</div>
-      <div class="col" [hidden]="!isTragedyEvent()">
+      <div class="col bg__col">{{getStatus()}}</div>
+      <div class="col bg__col" [hidden]="!isTragedyEvent()">
         {{getTragedy()}}
       </div>
-      <div class="col">{{getChildEnv()}}</div>
+      <div class="col bg__col">{{getChildEnv()}}</div>
     </div>
-  </div>
-  <br>
-  <div class="family-siblings">
-    <div class="row">
-      <div class="col-sm h6">{{localization.getSibling()}}</div>
-      <div class="col">{{getNumSiblings()}}</div>
-    </div>
-    <span *ngFor="let sibling of getSiblings(); index as i">
-    <div class="row">
-      <div class="col">{{getSiblingGender(i)}}</div><br>
-      <div class="col">{{getSiblingAge(i)}}</div><br>
-      <div class="col">{{getSiblingFeelings(i)}}</div><br>
-    </div>
-  </span>
   </div>
 
-  <div class="text-right">
-    <div class="btn btn-outline-primary" (click)="onGenerate()">
-      {{btnLocalization.getGenerate()}}
+  <div class="bg__details text align-content-center">
+    <div class="row">
+      <div class="col bg__h_1">{{localization.getSibling()}}</div>
+      <div class="col bg__h_1">{{getNumSiblings()}}</div>
+    </div>
+    <span *ngFor="let sibling of getSiblings(); index as i">
+      <div class="row">
+        <div class="col bg__col">{{getSiblingGender(i)}}</div>
+        <div class="col bg__col">{{getSiblingAge(i)}}</div>
+        <div class="col bg__col">{{getSiblingFeelings(i)}}</div>
+      </div>
+    </span>
+  </div>
+
+  <div class="row row-cols-1 justify-content-end">
+    <div class="col-2 btn">
+      <button class="text btn__content" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
     </div>
   </div>
 </div>

@@ -1,22 +1,24 @@
-<div class="container ethnic text-center" [hidden]="!(isGenerated && selected)">
-  <div class="bg-success text-white">{{localization.getHeader()}}</div>
+<div class="container bg__elem text-center" [hidden]="!(isGenerated && selected)">
 
-  <div class="ethnic-details">
+  <div class="bg__details text">
+    <div class="bg__h">{{localization.getHeader()}}</div>
     <div class="row">
-      <div class="col h6">{{localization.getOrigin()}}</div>
-      <div class="col h6">{{localization.getLanguages()}}</div>
+      <div class="col bg__h_1">{{localization.getOrigin()}}</div>
+      <div class="col bg__h_1">{{localization.getLanguages()}}</div>
     </div>
-    <div class="row">
-      <div class="col">{{getEthnicOrigin()}}</div>
-      <div class="col">
-        <span *ngFor="let language of getEthnicLanguages()">{{language}};&nbsp;</span>
+    <div class="row align-content-center">
+      <div class="col bg__col">{{getEthnicOrigin()}}</div>
+      <div class="col bg__col">
+        <div *ngFor="let language of getEthnicLanguages()">{{language}};&nbsp;</div>
       </div>
     </div>
   </div>
 
-  <div class="text-right">
-    <div class="btn btn-outline-primary" (click)="onGenerate()">
-      {{btnLocalization.getGenerate()}}
+  <div class="row row-cols-1 justify-content-end">
+    <div class="col-2 btn">
+      <button class="text btn__content" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
     </div>
   </div>
 </div>

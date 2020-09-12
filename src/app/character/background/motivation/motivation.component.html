@@ -1,32 +1,36 @@
-<div class="container motivation text-center" [hidden]="!(isGenerated && selected)">
-  <div class="bg-success text-white" [hidden]="hideHeaderAndBtn">{{localization.getHeader()}}</div>
+<div class="container bg__elem text-center" [hidden]="!(isGenerated && selected)">
 
-  <div class="motivation-details">
-    <div class="row">
-      <div class="col-sm h6">{{localization.getPersonalTraits()}}</div>
-      <div class="col">{{getPersonTraits()}}</div>
+  <div class="bg__details text align-content-center">
+    <div class="bg__h" [hidden]="hideHeaderAndBtn">
+      {{localization.getHeader()}}
     </div>
     <div class="row">
-      <div class="col-sm h6">{{localization.getValuePerson()}}</div>
-      <div class="col">{{getPersonValue()}}</div>
+      <div class="col bg__h_1">{{localization.getPersonalTraits()}}</div>
+      <div class="col bg__col">{{getPersonTraits()}}</div>
     </div>
     <div class="row">
-      <div class="col-sm h6">{{localization.getValueMost()}}</div>
-      <div class="col">{{getValueMost()}}</div>
+      <div class="col bg__h_1">{{localization.getValuePerson()}}</div>
+      <div class="col bg__col">{{getPersonValue()}}</div>
     </div>
     <div class="row">
-      <div class="col-sm h6">{{localization.getFeelAboutPeople()}}</div>
-      <div class="col">{{getFeelAboutPeople()}}</div>
+      <div class="col bg__h_1">{{localization.getValueMost()}}</div>
+      <div class="col bg__col">{{getValueMost()}}</div>
     </div>
     <div class="row">
-      <div class="col-sm h6">{{localization.getValuedPossession()}}</div>
-      <div class="col">{{getValuePossession()}}</div>
+      <div class="col bg__h_1">{{localization.getFeelAboutPeople()}}</div>
+      <div class="col bg__col">{{getFeelAboutPeople()}}</div>
+    </div>
+    <div class="row">
+      <div class="col bg__h_1">{{localization.getValuedPossession()}}</div>
+      <div class="col bg__col">{{getValuePossession()}}</div>
     </div>
   </div>
 
-  <div class="text-right" [hidden]="hideHeaderAndBtn">
-    <div class="btn btn-outline-primary" (click)="onGenerate()">
-      {{btnLocalization.getGenerate()}}
+  <div class="row row-cols-1 justify-content-end" [hidden]="hideHeaderAndBtn">
+    <div class="col-2 btn">
+      <button class="text btn__content" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
     </div>
   </div>
 </div>
