@@ -1,75 +1,77 @@
 <div class="container skills text-center" [hidden]="!(isGenerated && options.selected)">
 
-  <div class="skills-details">
-    <div class="h5">
+  <div class="skills_details text">
+    <div class="skills__h">
       {{localization.getCharacteristics()}}
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getInt()}}</div>
-      <div class="col">{{characteristics.int}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getInt()}}</div>
+      <div class="col-1 skills__value">{{characteristics.int}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getTech()}}</div>
-      <div class="col">{{characteristics.tech}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getTech()}}</div>
+      <div class="col-1 skills__value">{{characteristics.tech}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getCool()}}</div>
-      <div class="col">{{characteristics.cool}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getCool()}}</div>
+      <div class="col-1 skills__value">{{characteristics.cool}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getRef()}}</div>
-      <div class="col">{{characteristics.ref}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getRef()}}</div>
+      <div class="col-1 skills__value">{{characteristics.ref}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getAttr()}}</div>
-      <div class="col">{{characteristics.attr}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getAttr()}}</div>
+      <div class="col-1 skills__value">{{characteristics.attr}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getLuck()}}</div>
-      <div class="col">{{characteristics.luck}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getLuck()}}</div>
+      <div class="col-1 skills__value">{{characteristics.luck}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getMa()}}</div>
-      <div class="col">{{characteristics.ma}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getMa()}}</div>
+      <div class="col-1 skills__value">{{characteristics.ma}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getEmp()}}</div>
-      <div class="col">{{characteristics.emp}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getEmp()}}</div>
+      <div class="col-1 skills__value">{{characteristics.emp}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getBody()}}</div>
-      <div class="col">{{characteristics.body}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getBody()}}</div>
+      <div class="col-1 skills__value">{{characteristics.body}}</div>
     </div>
-    <div class="h5">{{localization.getDependCharacteristics()}}</div>
-    <div class="row">
-      <div class="col h6">{{localization.getRun()}}</div>
-      <div class="col">{{characteristics.run}}</div>
+    <div class="skills__h">{{localization.getDependCharacteristics()}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getRun()}}</div>
+      <div class="col-1 skills__value">{{characteristics.run}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getLeap()}}</div>
-      <div class="col">{{characteristics.leap}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getLeap()}}</div>
+      <div class="col-1 skills__value">{{characteristics.leap}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getBtm()}}</div>
-      <div class="col">{{characteristics.btm}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getBtm()}}</div>
+      <div class="col-1 skills__value">{{characteristics.btm}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getCarry()}}</div>
-      <div class="col">{{characteristics.carry}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getCarry()}}</div>
+      <div class="col-1 skills__value">{{characteristics.carry}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getLift()}}</div>
-      <div class="col">{{characteristics.lift}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getLift()}}</div>
+      <div class="col-1 skills__value">{{characteristics.lift}}</div>
     </div>
-    <div class="row">
-      <div class="col h6">{{localization.getHumanity()}}</div>
-      <div class="col">{{characteristics.humanity}}</div>
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col skills__skill">{{localization.getHumanity()}}</div>
+      <div class="col-1 skills__value">{{characteristics.humanity}}</div>
     </div>
   </div>
 
-  <div class="text-right">
-    <div class="btn btn-outline-primary" (click)="onGenerate()">
-      {{btnLocalization.getGenerate()}}
+  <div class="row row-cols-1 justify-content-end">
+    <div class="col-2 btn">
+      <button class="text btn__content" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
     </div>
   </div>
 </div>

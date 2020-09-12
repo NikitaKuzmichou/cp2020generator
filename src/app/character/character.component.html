@@ -1,5 +1,5 @@
 <span *ngIf="isLanguageChanged() then updateLocalization()"></span>
-<div class="generation__h text text-center neon__shadow">
+<div class="generation__h text text-center animated__neon__shadow">
   {{localization.getHeader()}}
 </div>
 
@@ -98,12 +98,11 @@
     </div>
   </ng-template>
   <div class="row justify-content-end">
-    <div class="col-3 btn">
-    <button class="col btn__content text neon__shadow" (click)="generateInfo()">
-      {{btnLocalization.getGenerate()}}
-    </button>
-    <span class="btn__glitch"></span>
-  </div>
+    <div class="btn">
+      <button class="col btn__content text animated__neon__shadow" (click)="generateInfo()">
+        {{btnLocalization.getGenerate()}}
+      </button>
+    </div>
   </div>
 </div>
 

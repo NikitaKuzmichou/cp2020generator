@@ -15,9 +15,8 @@ i {
 }
 
 .options__h {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   text-transform: lowercase;
-  font-weight: 500;
   color: var(--blue-color);
   background-color: var(--dark-neon-color);
 }

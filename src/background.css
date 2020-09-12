@@ -1,0 +1,57 @@
+.bg__color {
+  background: linear-gradient(to bottom, #320ced, #c43845);
+}
+
+.bg__stars {
+  background: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+  radial-gradient(rgba(255,255,255,0.4) 1px, transparent 2px),
+  radial-gradient(rgba(255,255,255,0.7) 2px, transparent 1px),
+  radial-gradient(rgba(255,255,255,0.4) 1px, transparent 3px),
+  radial-gradient(rgba(255,255,255,0.2) 1px, transparent 2px);
+  background-size: 4em 4em, 7em 7em, 30em 38em, 13em 13em, 5em 5em, 100% 100%;
+}
+
+.sun {
+  background: linear-gradient(
+    to bottom,
+    rgb(230, 230, 115) 30%,
+    rgb(233, 176, 19) 45%,
+    transparent 45%,
+    transparent 46%,
+    rgb(233, 176, 19) 46%,
+    orange 50%,
+    transparent 50%,
+    transparent 52%,
+    orange 52%,
+    red 57%,
+    transparent 57%,
+    transparent 59%,
+    red 59%,
+    rgb(231, 49, 161) 64%,
+    transparent 64%,
+    transparent 67%,
+    rgb(231, 49, 161) 67%,
+    rgb(187, 6, 187) 72%,
+    transparent 72%,
+    transparent 75%,
+    rgb(187, 6, 187) 75%,
+    purple 80%,
+    transparent 80%,
+    transparent 84%,
+    purple 84%
+  );
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.sun::after {
+  position: absolute;
+  background: radial-gradient(rgb(253, 0, 225) 80%, transparent);
+  content: ' ';
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px #FD00E1;
+  z-index: -1;
+}

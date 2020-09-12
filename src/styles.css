@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+@import "background.css";
 
 :root {
-  --yellow-color: #FFE535;
+  --yellow-color: #F3C53E;  /*fcb354*/
   --orange-color: #E54900;
   --red-color: #fc0537;
   --neon-light-color: #CF33D9;
   --neon-color: #E00BC8;
   --purple-color: #961861;
-  --dark-neon-color: #660E89;
+  --dark-neon-color: #601A9E;
   --black-color: #050A0E;
   --blue-color: #1ACDD2;
+  --blue-metal-color: #5084D8;
   --dark-blue-color: #3208E8;
+
   --white-color: #FAFAFA;
   --gray-color: #CDCDCD;
 }
@@ -20,12 +23,8 @@ a {
   color: var(--black-color);
 }
 
-select {
+select, button {
   outline: none;
-}
-
-.main-bg {
-  background-color: var(--black-color);
 }
 
 .text {
@@ -45,7 +44,7 @@ select {
   cursor: pointer;
   position: relative;
   color: var(--black-color);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 10% 100%, 0% 75%, 0 0);
 }
 
 .btn__content {
@@ -77,8 +76,8 @@ select {
   height: 100%;
   background-color: var(--yellow-color);
   filter: drop-shadow(-2px 3px var(--blue-color))
-    drop-shadow(-1px -3px var(--blue-color))
-    drop-shadow(2px 1px var(--blue-color));
+          drop-shadow(-1px -3px var(--blue-color))
+          drop-shadow(2px 1px var(--blue-color));
 }
 
 .btn--secondary .btn__glitch {
@@ -86,6 +85,18 @@ select {
 }
 
 .neon__shadow {
+  color: var(--yellow-color);
+  text-shadow: 0 0 5px var(--neon-color),
+               0 0 10px var(--neon-color),
+               0 0 20px var(--neon-color),
+               0 0 40px var(--neon-color),
+               0 0 80px var(--neon-color),
+               0 0 90px var(--neon-color),
+               0 0 100px var(--neon-color),
+               0 0 120px var(--neon-color);
+}
+
+.animated__neon__shadow {
   animation: neon-shadow 5s steps(1, start) infinite reverse;
 }
 
@@ -124,7 +135,8 @@ select {
                  0 0 120px var(--neon-color);
   }
 
-  82% {color: var(--yellow-color);
+  82% {
+    color: var(--yellow-color);
     text-shadow: 0 0 5px var(--red-color),
                  0 0 10px var(--red-color),
                  0 0 20px var(--red-color),

@@ -1,11 +1,11 @@
 @import "../styles.css";
 
 .language {
-  background-color: var(--black-color);
+  background-color: transparent;
 }
 
 nav {
-  background: linear-gradient(to bottom, var(--dark-blue-color), var(--purple-color));
+  background: transparent;
 }
 
 .row {

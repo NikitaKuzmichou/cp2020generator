@@ -1,2 +1,49 @@
 @import "../../app.component.css";
 
+.text {
+  color: var(--white-color);
+}
+
+.skills {
+  padding: 10px;
+}
+
+.skills_details {
+  padding: 10px;
+}
+
+.skills__h {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: var(--blue-color);
+}
+
+.skills__skill, .skills__value {
+  border: solid 5px var(--black-color);
+}
+
+.skills__skill {
+  background-color: var(--blue-metal-color);
+}
+
+.skills__value {
+  background-color: var(--dark-blue-color);
+}
+
+.btn__content {
+  background-color: transparent;
+  border: transparent;
+}
+
+.btn {
+  background-color: #ad18c9;
+  border-color: var(--red-color);
+}
+
+.btn__content {
+  width: 100%;
+}
+
+.btn__content:hover {
+  background-color: var(--blue-metal-color);
+}
