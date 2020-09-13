@@ -4,12 +4,14 @@
     <div class="bg__h" [hidden]="hideHeaderAndBtn">{{localization.getHeader()}}</div>
     <div class="row">
       <div class="col bg__h_1">{{localization.getClothes()}}</div>
-      <div class="col bg__h_1">{{localization.getHairstyle()}}</div>
-      <div class="col bg__h_1">{{localization.getAffectations()}}</div>
+      <div class="col bg__col">{{getClothes()}}</div>
     </div>
     <div class="row">
-      <div class="col bg__col">{{getClothes()}}</div>
+      <div class="col bg__h_1">{{localization.getClothes()}}</div>
       <div class="col bg__col">{{getHairstyle()}}</div>
+    </div>
+    <div class="row">
+      <div class="col bg__h_1">{{localization.getAffectations()}}</div>
       <div class="col bg__col">{{getAffectations()}}</div>
     </div>
   </div>

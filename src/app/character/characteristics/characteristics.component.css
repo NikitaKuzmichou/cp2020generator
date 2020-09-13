@@ -23,11 +23,11 @@
 }
 
 .skills__skill {
-  background-color: var(--blue-metal-color);
+  background-color: var(--dark-blue-color);
 }
 
 .skills__value {
-  background-color: var(--dark-blue-color);
+  background-color: var(--blue-metal-color);
 }
 
 .btn__content {
