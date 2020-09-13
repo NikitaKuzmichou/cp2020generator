@@ -3,9 +3,7 @@ import { AppLanguage } from '../../../../app.language';
 
 export class MotivationLocalizationEn implements MotivationLocalization {
   getHeader() {
-    return 'What makes you tick? ' +
-      'Will you back up your friends or go for the main chance? ' +
-      'What\'s important to you?';
+    return 'Motivations';
   }
 
   getLanguage() {
@@ -13,7 +11,7 @@ export class MotivationLocalizationEn implements MotivationLocalization {
   }
 
   getPersonalTraits() {
-    return 'PERSONALITY TRAITS';
+    return 'Personality traits';
   }
 
   getPersonTraitByRoll(roll: number) {
@@ -44,7 +42,7 @@ export class MotivationLocalizationEn implements MotivationLocalization {
   }
 
   getValuePerson() {
-    return 'PERSON YOU VALUE MOST';
+    return 'Person you value most';
   }
 
   getValuePersonByRoll(roll: number) {
@@ -75,7 +73,7 @@ export class MotivationLocalizationEn implements MotivationLocalization {
   }
 
   getValueMost() {
-    return 'WHAT DO YOU VALUE MOST?';
+    return 'What do you value most?';
   }
 
   getValueMostByRoll(roll: number) {
@@ -106,7 +104,7 @@ export class MotivationLocalizationEn implements MotivationLocalization {
   }
 
   getFeelAboutPeople() {
-    return 'HOW DO YOU FEEL ABOUT MOST PEOPLE?';
+    return 'How do you feel about most people?';
   }
 
   getFeelAboutPeopleByRoll(roll: number) {
@@ -136,7 +134,7 @@ export class MotivationLocalizationEn implements MotivationLocalization {
   }
 
   getValuedPossession() {
-    return 'YOUR MOST VALUED POSSESSION';
+    return 'Your most valued possession';
   }
 
   getValuedPossessionByRoll(roll: number) {

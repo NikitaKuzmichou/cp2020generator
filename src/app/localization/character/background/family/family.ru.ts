@@ -39,7 +39,7 @@ export class FamilyLocalizationRu implements FamilyLocalization {
   }
 
   getParents() {
-    return 'РОДИТЕЛИ';
+    return 'Родители';
   }
 
   getParentsByRoll(roll: number) {
@@ -62,7 +62,7 @@ export class FamilyLocalizationRu implements FamilyLocalization {
   }
 
   getHappedEvent() {
-    return 'ЧТО-ТО СЛУЧИЛОСЬ С ТВОИМИ РОДИТЕЛЯМИ';
+    return 'Что-то случилось с твоими родителями';
   }
 
   getHappedEventByRoll(roll: number) {
@@ -93,7 +93,7 @@ export class FamilyLocalizationRu implements FamilyLocalization {
   }
 
   getStatus() {
-    return 'СЕМЕЙНЫЙ СТАТУС';
+    return 'Семейный статус';
   }
 
   getStatusByRoll(roll: number) {
@@ -116,7 +116,7 @@ export class FamilyLocalizationRu implements FamilyLocalization {
   }
 
   getChildEnv() {
-    return 'ДЕТСТВО';
+    return 'Детство';
   }
 
   getChildEnvByRoll(roll: number) {
@@ -147,7 +147,7 @@ export class FamilyLocalizationRu implements FamilyLocalization {
   }
 
   getTragedy() {
-    return 'СЕМЕЙНАЯ ТРАГЕДИЯ';
+    return 'Семейная трагедия';
   }
 
   getTragedyByRoll(roll: number) {

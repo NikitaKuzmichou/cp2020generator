@@ -3,9 +3,7 @@ import { AppLanguage } from '../../../../app.language';
 
 export class MotivationLocalizationRu implements MotivationLocalization {
   getHeader() {
-    return 'Что тебя заводит? ' +
-      'Ты прикроешь своих друзей или воспользуешься выпавшим шансом? ' +
-      'Что важно для тебя?';
+    return 'Мотивация';
   }
 
   getLanguage() {
@@ -13,7 +11,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
   }
 
   getPersonalTraits() {
-    return 'ЧЕРТЫ ХАРАКТЕРА';
+    return 'Черты характера';
   }
 
   getPersonTraitByRoll(roll: number) {
@@ -44,7 +42,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
   }
 
   getValuePerson() {
-    return 'ЛИЧНОСТЬ, КОТОРУЮ ЦЕНИШЬ БОЛЬШЕ ВСЕГО';
+    return 'Личность, которую ты ценишь больше всего';
   }
 
   getValuePersonByRoll(roll: number) {
@@ -75,7 +73,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
   }
 
   getValueMost() {
-    return 'ЧТО ВЫ ЦЕНИТЕ БОЛЬШЕ?';
+    return 'Что для тебя важнее всего?';
   }
 
   getValueMostByRoll(roll: number) {
@@ -106,7 +104,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
   }
 
   getFeelAboutPeople() {
-    return 'КАК ВЫ ОТНОСИТЕСЬ К БОЛЬШИНСТВУ ЛЮДЕЙ?';
+    return 'Как ты относишься к большинству людей?';
   }
 
   getFeelAboutPeopleByRoll(roll: number) {
@@ -119,7 +117,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
       case 4:
         return 'Неприязнь почти ко всем';
       case 5:
-        return 'Люди - это инструмент. Используете их в своих целях, а потом бросаете';
+        return 'Люди - это инструмент. Используешь их в своих целях, а потом бросаешь';
       case 6:
         return 'Каждый человек - драгоценная индивидуальность';
       case 7:
@@ -136,7 +134,7 @@ export class MotivationLocalizationRu implements MotivationLocalization {
   }
 
   getValuedPossession() {
-    return 'САМЫЙ ЗНАЧИМЫЙ ДЛЯ ТЕБЯ ПРЕДМЕТ';
+    return 'Самый значимый для тебя предмет';
   }
 
   getValuedPossessionByRoll(roll: number) {

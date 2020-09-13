@@ -8,7 +8,7 @@ export class RomanticEventsLocalizationRu implements RomanticEventsLocalization 
   }
 
   getGeneratedPerson() {
-    return 'Это был';
+    return 'Внешний вид и мотивация партнёра';
   }
 
   getHowWorked() {
@@ -46,7 +46,7 @@ export class RomanticEventsLocalizationRu implements RomanticEventsLocalization 
         return 'Друзья/семья вашего возлюбленного воспользуются ' +
           'любыми средствами, чтобы избавиться от тебя';
       case 3:
-        return 'Ваши друзья/семья ненавидят твоего возлюбленного';
+        return 'Твои друзья/семья ненавидят твоего возлюбленного';
       case 4:
         return 'Кто-то из вас борется с конкурентом в отношениях (любовный треугольник)';
       case 5:

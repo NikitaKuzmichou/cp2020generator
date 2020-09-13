@@ -8,7 +8,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getRanking() {
-    return 'FAMILY RANKING';
+    return 'Family ranking';
   }
 
   getRankingByRoll(roll: number) {
@@ -39,7 +39,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getParents() {
-    return 'PARENTS';
+    return 'Parents';
   }
 
   getParentsByRoll(roll: number) {
@@ -62,7 +62,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getHappedEvent() {
-    return 'SOMETHING HAPPED TO YOUR PARENTS';
+    return 'Something happened to your parents';
   }
 
   getHappedEventByRoll(roll: number) {
@@ -93,7 +93,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getStatus() {
-    return 'FAMILY STATUS';
+    return 'Family status';
   }
 
   getStatusByRoll(roll: number) {
@@ -116,7 +116,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getChildEnv() {
-    return 'CHILDHOOD ENVIRONMENT';
+    return 'Childhood environment';
   }
 
   getChildEnvByRoll(roll: number) {
@@ -147,7 +147,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getTragedy() {
-    return 'FAMILY TRAGEDY';
+    return 'Family tragedy';
   }
 
   getTragedyByRoll(roll: number) {
@@ -178,7 +178,7 @@ export class FamilyLocalizationEn implements FamilyLocalization {
   }
 
   getSibling() {
-    return 'SIBLINGS';
+    return 'Siblings';
   }
 
   getNumSiblingsByRoll(roll: number) {
