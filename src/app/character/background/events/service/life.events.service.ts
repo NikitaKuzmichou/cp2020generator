@@ -57,7 +57,7 @@ export class LifeEventsService {
         case 9:
         case 10:
           if (!options.nothingHappenedEvents) {
-            events.push(this.nothing.generateRomantic(eventDate));
+            events.push(this.nothing.generateNothing(eventDate));
             ++eventDate;
           }
           break;

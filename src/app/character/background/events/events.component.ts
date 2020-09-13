@@ -60,8 +60,4 @@ export class EventsComponent implements OnInit {
       return false;
     }
   }
-
-  logFriendsEnemies(event) {
-    console.log(event);
-  }
 }

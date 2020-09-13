@@ -11,10 +11,11 @@ export class FriendsEnemiesGenerate {
 
   generateFriendsEnemies(age: number): LifeEvent {
     let lifeEvent = new LifeEvent(age, LifeEventType.friendsEnemies);
+    //roll for friend\enemy
     lifeEvent.addRoll(this.d10.roll());
     //roll for gender
     lifeEvent.addRoll(this.d10.roll());
-    if (lifeEvent.getRoll(1) < 6) {
+    if (lifeEvent.getRoll(0) < 6) {
       //friend roll
       lifeEvent.addRoll(this.d10.roll());
     } else {

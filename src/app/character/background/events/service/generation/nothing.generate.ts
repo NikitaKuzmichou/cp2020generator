@@ -6,7 +6,7 @@ export class NothingGenerate {
   constructor() {
   }
 
-  generateRomantic(age: number): LifeEvent {
+  generateNothing(age: number): LifeEvent {
     return new LifeEvent(age, LifeEventType.nothing);
   }
 }

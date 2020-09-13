@@ -19,14 +19,14 @@ export class LifeEventsResolver {
 
   isFriend(event: LifeEvent) {
     if (this.isFriendsEnemiesEvent(event)) {
-      return event.getRoll(3) < 6;
+      return event.getRoll(0) < 6;
     }
     return false;
   }
 
   isEnemy(event: LifeEvent) {
     if (this.isFriendsEnemiesEvent(event)) {
-      return event.getRoll(3) > 5;
+      return event.getRoll(0) > 5;
     }
     return false;
   }
