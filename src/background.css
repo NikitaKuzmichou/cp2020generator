@@ -1,5 +1,13 @@
+.bg__color, .bg__stars {
+  top:0;
+  left:0;
+  min-width:100%;
+  min-height:100%;
+}
+
 .bg__color {
   background: linear-gradient(to bottom, #320ced, #c43845);
+  position: absolute;
 }
 
 .bg__stars {
