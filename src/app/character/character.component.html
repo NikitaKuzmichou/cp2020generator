@@ -72,8 +72,7 @@
       </label>
       <div class="col text" [hidden]="options.backgroundOptions.events.randomAge">
         <input type="number" [min]="16" [max]="74"
-               [(ngModel)]="options.backgroundOptions.events.age"
-               (keyup)="checkInputAge($event)">
+               [(ngModel)]="options.backgroundOptions.events.age">
         {{localization.getAge()}}
       </div>
     </div>

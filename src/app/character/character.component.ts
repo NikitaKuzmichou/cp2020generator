@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
+import { interval } from 'rxjs';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
@@ -6,6 +7,7 @@ import { GenerationOptions } from './options/generation.options';
 import { CharacteristicsComponent } from './characteristics/characteristics.component';
 import { BackgroundComponent } from './background/background.component';
 import { ButtonsLocalization } from '../localization/buttons/buttons';
+import {delay} from "rxjs/operators";
 
 @Component({
   selector: 'app-character',
@@ -43,16 +45,12 @@ export class CharacterComponent implements OnInit {
     this.showOptions = !this.showOptions;
   }
 
-  /**TODO*/
-  checkInputAge(event) {
-    if (event.path[0].value < 16) {
-      event.path[0].value = 16;
-    } else if (event.path[0].value > 74) {
-      event.path[0].value = 74;
-    }
-  }
-
   generateInfo() {
+    if (this.options.backgroundOptions.events.age < 16) {
+      this.options.backgroundOptions.events.age = 16;
+    } else if (this.options.backgroundOptions.events.age > 74) {
+      this.options.backgroundOptions.events.age = 74;
+    }
     this.characteristics.onGenerate();
     this.background.onGenerate();
   }
