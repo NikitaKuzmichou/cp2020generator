@@ -29,7 +29,6 @@ export class DressLocalizationRu implements DressLocalization {
       case 6:
         return 'Высокая мода';
       case 7:
-        /**TODO*/
         return 'Cammos';
       case 8:
         return 'Обычная одежда';
@@ -49,7 +48,6 @@ export class DressLocalizationRu implements DressLocalization {
   getHairstyleByRoll(roll: number) {
     switch (roll) {
       case 1:
-        /**TODO*/
         return 'Mohawk';
       case 2:
         return 'Длинная и крысиная';
