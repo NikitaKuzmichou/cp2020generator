@@ -27,8 +27,8 @@ export class FamilyComponent implements OnInit {
 
   onGenerate() {
     if (this.selected) {
-      this.isGenerated = true;
       this.rolls = this.service.generateRolls();
+      this.isGenerated = true;
     } else {
       return false;
     }
@@ -48,13 +48,13 @@ export class FamilyComponent implements OnInit {
 
   isSomethingHapped() {
     if (this.rolls) {
-      return this.rolls.somethingHapped > 6;
+      return this.rolls.somethingHappened > 6;
     }
   }
 
   getSomethingHapped() {
     if (this.rolls) {
-      return this.localization.getHappedEventByRoll(this.rolls.somethingHapped);
+      return this.localization.getHappedEventByRoll(this.rolls.somethingHappened);
     }
   }
 

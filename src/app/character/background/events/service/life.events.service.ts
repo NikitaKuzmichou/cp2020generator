@@ -1,10 +1,10 @@
-import { LifeEventsOptions } from './life.events.options';
+import { LifeEventsOptions } from '../../../options/life.events.options';
 import { LifeEvent } from './life.event';
 
 import { Dice } from '../../../../service/dices/dice';
 import { DiceD6 } from '../../../../service/dices/dice.d6';
 import { DiceD10 } from '../../../../service/dices/dice.d10';
-import { DiceRoll } from '../../../../service/dices/dice.roll';
+import { DiceService } from '../../../../service/dices/diceService';
 import { ProblemsWinsGenerate } from './generation/problems.wins.generate';
 import { FriendsEnemiesGenerate } from './generation/friends.enemies.generate';
 import { RomanticGenerate } from './generation/romantic.generate';
@@ -33,7 +33,7 @@ export class LifeEventsService {
     }
     let roll;
     let eventDate = 17;
-    let events = new Array<LifeEvent>();
+    const events = new Array<LifeEvent>();
     while (eventDate <= options.age) {
       roll = this.d10.roll();
       switch (roll) {
@@ -56,7 +56,7 @@ export class LifeEventsService {
           break;
         case 9:
         case 10:
-          if (!options.nothingHappenedEvents) {
+          if (!options.preventNothingHappenedEvents) {
             events.push(this.nothing.generateNothing(eventDate));
             ++eventDate;
           }
@@ -67,6 +67,6 @@ export class LifeEventsService {
   }
 
   private generateAge() {
-    return 16 + DiceRoll.multipleRoll(this.d6, 2);
+    return 16 + DiceService.multipleRoll(this.d6, 2);
   }
 }

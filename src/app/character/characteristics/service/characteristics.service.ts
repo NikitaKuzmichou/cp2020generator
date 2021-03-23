@@ -1,4 +1,4 @@
-import { DiceRoll } from '../../../service/dices/dice.roll';
+import { DiceService } from '../../../service/dices/diceService';
 import { DiceD6 } from '../../../service/dices/dice.d6';
 import { Dice } from '../../../service/dices/dice';
 
@@ -12,7 +12,7 @@ export class CharacteristicsService {
   public generateCharacteristic() {
     let skill;
     do {
-      skill = DiceRoll.multipleRoll(this.d6, 2);
+      skill = DiceService.multipleRoll(this.d6, 2);
     } while (skill > 10);
     return skill;
   }

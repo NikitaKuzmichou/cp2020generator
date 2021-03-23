@@ -15,20 +15,22 @@ export class MotivationComponent implements OnInit {
   @Input() selected: boolean;
   @Input() localization: MotivationLocalization;
   @Input() btnLocalization: ButtonsLocalization;
-  @Input() generateAfterCreation: boolean;
+  @Input() generateAfterCreation: boolean; // нужно для генерации компонента сразу после создания
   @Input() hideHeaderAndBtn: boolean;
   isGenerated: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.isGenerated = false;
     this.d10 = new DiceD10();
     this.roll = null;
+    this.isGenerated = false;
     if (this.generateAfterCreation) {
       this.onGenerate();
     }
   }
+
+
 
   onGenerate() {
     if (this.selected) {

@@ -16,7 +16,7 @@ export class FamilyService {
     this.rolls.ranking = this.dice.roll();
     this.rolls.parents = this.dice.roll();
     if (this.rolls.parents > 6) {
-      this.rolls.somethingHapped = this.dice.roll();
+      this.rolls.somethingHappened = this.dice.roll();
     }
     this.rolls.status = this.dice.roll();
     if (this.rolls.status > 6) {

@@ -10,24 +10,24 @@ export class FriendsEnemiesGenerate {
   }
 
   generateFriendsEnemies(age: number): LifeEvent {
-    let lifeEvent = new LifeEvent(age, LifeEventType.friendsEnemies);
-    //roll for friend\enemy
+    const lifeEvent = new LifeEvent(age, LifeEventType.friendsEnemies);
+    // roll for friend\enemy
     lifeEvent.addRoll(this.d10.roll());
-    //roll for gender
+    // roll for gender
     lifeEvent.addRoll(this.d10.roll());
     if (lifeEvent.getRoll(0) < 6) {
-      //friend roll
+      // friend roll
       lifeEvent.addRoll(this.d10.roll());
     } else {
-      //enemy roll
+      // enemy roll
       lifeEvent.addRoll(this.d10.roll());
-      //cause roll
+      // cause roll
       lifeEvent.addRoll(this.d10.roll());
-      //who's fracked off roll
+      // who's fracked off roll
       lifeEvent.addRoll(this.d10.roll());
-      //whatcha gonna do roll
+      // whatcha gonna do roll
       lifeEvent.addRoll(this.d10.roll());
-      //what can throw against roll
+      // what can throw against roll
       lifeEvent.addRoll(this.d10.roll());
     }
     return lifeEvent;

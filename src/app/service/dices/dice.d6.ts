@@ -1,5 +1,5 @@
 import { Dice } from './dice';
-import { Random } from '../random/random';
+import { RandomNumbers } from '../random/RandomNumbers';
 
 export class DiceD6 implements Dice {
   getNumSides() {
@@ -7,6 +7,6 @@ export class DiceD6 implements Dice {
   }
 
   roll() {
-    return Random.getRandomInt(1, 6);
+    return RandomNumbers.randomInt(1, 6);
   }
 }

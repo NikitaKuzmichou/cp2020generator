@@ -419,7 +419,7 @@ class FamilyService {
         this.rolls.ranking = this.dice.roll();
         this.rolls.parents = this.dice.roll();
         if (this.rolls.parents > 6) {
-            this.rolls.somethingHapped = this.dice.roll();
+            this.rolls.somethingHappened = this.dice.roll();
         }
         this.rolls.status = this.dice.roll();
         if (this.rolls.status > 6) {
@@ -837,7 +837,7 @@ class LifeEventsOptions {
     constructor() {
         /**TODO*/
         this.selected = true;
-        this.nothingHappenedEvents = false;
+        this.preventNothingHappenedEvents = false;
         this.randomAge = true;
         this.age = 16;
         this.detailedGeneration = true;
@@ -2514,7 +2514,7 @@ function CharacterComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](31, "label", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](32, "input", 35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function CharacterComponent_ng_template_5_Template_input_ngModelChange_32_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r7); const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](); return ctx_r15.options.backgroundOptions.events.nothingHappenedEvents = $event; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function CharacterComponent_ng_template_5_Template_input_ngModelChange_32_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r7); const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](); return ctx_r15.options.backgroundOptions.events.preventNothingHappenedEvents = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](33);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
@@ -2574,7 +2574,7 @@ function CharacterComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r3.localization.getDetailedGeneration(), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx_r3.options.backgroundOptions.events.nothingHappenedEvents);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx_r3.options.backgroundOptions.events.preventNothingHappenedEvents);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r3.localization.getNothingHappened(), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
@@ -3960,12 +3960,12 @@ class FamilyComponent {
     }
     isSomethingHapped() {
         if (this.rolls) {
-            return this.rolls.somethingHapped > 6;
+            return this.rolls.somethingHappened > 6;
         }
     }
     getSomethingHapped() {
         if (this.rolls) {
-            return this.localization.getHappedEventByRoll(this.rolls.somethingHapped);
+            return this.localization.getHappedEventByRoll(this.rolls.somethingHappened);
         }
     }
     getStatus() {

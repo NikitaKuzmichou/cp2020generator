@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 
 import { AppService } from '../app.service';
 import { CharacterLocalization } from '../localization/character/character';
-import { GenerationOptions } from './generation.options';
+import { GenerationOptions } from './options/generation.options';
 import { CharacteristicsComponent } from './characteristics/characteristics.component';
 import { BackgroundComponent } from './background/background.component';
 import { ButtonsLocalization } from '../localization/buttons/buttons';

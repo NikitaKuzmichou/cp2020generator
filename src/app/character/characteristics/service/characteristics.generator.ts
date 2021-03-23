@@ -9,7 +9,7 @@ export class CharacteristicsGenerator {
   }
 
   generateCharacteristics(): Characteristics {
-    let characteristics = new Characteristics();
+    const characteristics = new Characteristics();
     characteristics.attr = this.service.generateCharacteristic();
     characteristics.body = this.service.generateCharacteristic();
     characteristics.tech = this.service.generateCharacteristic();

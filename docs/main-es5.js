@@ -676,7 +676,7 @@
             this.rolls.parents = this.dice.roll();
 
             if (this.rolls.parents > 6) {
-              this.rolls.somethingHapped = this.dice.roll();
+              this.rolls.somethingHappened = this.dice.roll();
             }
 
             this.rolls.status = this.dice.roll();
@@ -4474,7 +4474,7 @@
 
             var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
 
-            return ctx_r15.options.backgroundOptions.events.nothingHappenedEvents = $event;
+            return ctx_r15.options.backgroundOptions.events.preventNothingHappenedEvents = $event;
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
@@ -4619,7 +4619,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx_r3.options.backgroundOptions.events.nothingHappenedEvents);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx_r3.options.backgroundOptions.events.preventNothingHappenedEvents);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
 
@@ -7143,14 +7143,14 @@
           key: "isSomethingHapped",
           value: function isSomethingHapped() {
             if (this.rolls) {
-              return this.rolls.somethingHapped > 6;
+              return this.rolls.somethingHappened > 6;
             }
           }
         }, {
           key: "getSomethingHapped",
           value: function getSomethingHapped() {
             if (this.rolls) {
-              return this.localization.getHappedEventByRoll(this.rolls.somethingHapped);
+              return this.localization.getHappedEventByRoll(this.rolls.somethingHappened);
             }
           }
         }, {

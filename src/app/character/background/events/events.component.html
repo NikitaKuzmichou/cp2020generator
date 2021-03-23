@@ -18,29 +18,29 @@
           <!--Big wins big problems-->
           <span class="problems_wins" *ngIf="resolver.isProblemsWinsEvent(event)">
             <!--Disaster-->
-            <span *ngIf="resolver.isDisasterEvent(event); else luck">
+            <span *ngIf="resolver.isDisasterEvent(event)">
               <div class="row">
                 <div class="col bg__h_1">{{problAndWinsLocalization.getDisaster()}}</div>
                 <div class="col bg__h_1">{{problAndWinsLocalization.getWhatGonnaDo()}}</div>
               </div>
               <div class="row">
                 <div class="col bg__col">
-                  {{problAndWinsLocalization.getDisasterByRoll(event.getRoll(0))}}
+                  {{getDisaster(event)}}
                 </div>
                 <div class="col bg__col">
-                  {{problAndWinsLocalization.getWhatGonnaDoByRoll(event.getRoll(1))}}
+                  {{getWhatGonnaDoDisaster(event)}}
                 </div>
               </div>
             </span>
             <!--Lucky-->
-            <ng-template #luck>
-              <div class="row bg__h_1 justify-content-center">
+            <span *ngIf="resolver.isLuckEvent(event)">
+              <div class="row bg__h_1 justify-content-center каво">
                 {{problAndWinsLocalization.getLucky()}}
               </div>
               <div class="row bg__col justify-content-center">
-                {{problAndWinsLocalization.getLuckyByRoll(event.getRoll(0))}}
+                {{getLucky(event)}}
               </div>
-            </ng-template>
+            </span>
           </span>
           <!--Friends and enemies-->
           <span class="friends_enemies"*ngIf="resolver.isFriendsEnemiesEvent(event)">
@@ -49,10 +49,9 @@
             </div>
             <div class="row justify-content-center">
               <div class="col bg__h_1">
-                {{friendsEnemLocalization.getFriendEnemy(event.getRoll(0)) + '. ' +
-                  friendsEnemLocalization.getFriendsEnemiesGender(event.getRoll(1))}}
+                {{getFriendEnemy(event)}}
                 <span *ngIf="options.detailedGeneration">
-                  {{' ' + friendsEnemLocalization.getGeneratedPerson(event.getRoll(1))}}
+                  {{getFriendEnemyStyleHeader(event)}}
                 </span>
               </div>
             </div>
@@ -92,7 +91,7 @@
                   {{friendsEnemLocalization.getEnemy()}}
                 </div>
                 <div class="col bg__col">
-                  {{friendsEnemLocalization.getEnemyByRoll(event.getRoll(2))}}
+                  {{getEnemy(event)}}
                 </div>
               </div>
               <div class="row justify-content-center">
@@ -100,7 +99,7 @@
                   {{friendsEnemLocalization.getCause()}}
                 </div>
                 <div class="col bg__col">
-                  {{friendsEnemLocalization.getCauseByRoll(event.getRoll(3))}}
+                  {{getEnemyCause(event)}}
                 </div>
               </div>
               <div class="row justify-content-center">
@@ -108,7 +107,7 @@
                   {{friendsEnemLocalization.getWhosFracked()}}
                 </div>
                 <div class="col bg__col">
-                  {{friendsEnemLocalization.getWhosFrackedByRoll(event.getRoll(4))}}
+                  {{getWhosFracked(event)}}
                 </div>
               </div>
               <div class="row justify-content-center">
@@ -116,7 +115,7 @@
                   {{friendsEnemLocalization.getWhatGonnaDo()}}
                 </div>
                 <div class="col bg__col">
-                  {{friendsEnemLocalization.getWhatGonnaDoByRoll(event.getRoll(5))}}
+                  {{getWhatGonnaDoEnemy(event)}}
                 </div>
               </div>
               <div class="row justify-content-center">
@@ -124,7 +123,7 @@
                   {{friendsEnemLocalization.getWhatHeCanThrow()}}
                 </div>
                 <div class="col bg__col">
-                  {{friendsEnemLocalization.getWhatHeCanThrowByRoll(event.getRoll(6))}}
+                  {{getWhatEnemyCanThrow(event)}}
                 </div>
               </div>
             </div>
@@ -147,12 +146,14 @@
                            [localization]="dressLocalization"
                            [btnLocalization]="btnLocalization"
                            [generateAfterCreation]="true"
-                           [hideHeaderAndBtn]="true"></app-dress>
+                           [hideHeaderAndBtn]="true">
+                </app-dress>
                 <app-motivation [selected]="true"
                                 [localization]="motivationLocalization"
                                 [btnLocalization]="btnLocalization"
                                 [generateAfterCreation]="true"
-                                [hideHeaderAndBtn]="true"></app-motivation>
+                                [hideHeaderAndBtn]="true">
+                </app-motivation>
               </div>
             </div>
             <!--Tragic love-->
@@ -163,10 +164,10 @@
               </div>
               <div class="row justify-content-center">
                 <div class="col bg__col">
-                  {{romanticLocalization.getTragicLoveByRoll(event.getRoll(1))}}
+                  {{getTragicLove(event)}}
                 </div>
                 <div class="col bg__col">
-                  {{romanticLocalization.getMutualFeelingsByRoll(event.getRoll(2))}}
+                  {{getMutualFeelings(event)}}
                 </div>
               </div>
             </span>
@@ -175,7 +176,7 @@
               <div class="row justify-content-center">
                 <div class="col bg__h_1">{{romanticLocalization.getLoveWithProblems()}}</div>
                 <div class="col bg__col">
-                  {{romanticLocalization.getLoveWithProblemsByRoll(event.getRoll(1))}}
+                  {{getLoveWithProblems(event)}}
                 </div>
               </div>
             </span>

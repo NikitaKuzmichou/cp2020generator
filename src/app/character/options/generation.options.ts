@@ -1,7 +1,7 @@
-import { SkillsOptions } from './skills/skills.options';
-import { NameOptions } from './name/name.options';
-import { CharacteristicsOptions } from './characteristics/service/characteristics.options';
-import { BackgroundOptions } from './background/background.options';
+import { SkillsOptions } from './skills.options';
+import { NameOptions } from './name.options';
+import { CharacteristicsOptions } from './characteristics.options';
+import { BackgroundOptions } from '../background/background.options';
 
 export class GenerationOptions {
   nameOptions: NameOptions;

@@ -54,11 +54,11 @@ export class BackgroundComponent implements OnInit {
   }
 
   onGenerate() {
-    this.isGenerated = true;
     this.ethnic.onGenerate();
     this.dress.onGenerate();
     this.motivation.onGenerate();
     this.family.onGenerate();
     this.events.onGenerate();
+    this.isGenerated = true;
   }
 }

@@ -10,15 +10,15 @@ export class RomanticGenerate {
   }
 
   generateRomantic(age: number): LifeEvent {
-    let lifeEvent = new LifeEvent(age, LifeEventType.romantic);
+    const lifeEvent = new LifeEvent(age, LifeEventType.romantic);
     lifeEvent.addRoll(this.d10.roll());
     if (lifeEvent.lastRoll() === 5) {
-      //roll tragic love affair
+      // roll tragic love affair
       lifeEvent.addRoll(this.d10.roll());
-      //roll mutual feelings
+      // roll mutual feelings
       lifeEvent.addRoll(this.d10.roll());
     } else if (lifeEvent.lastRoll() === 6 || lifeEvent.lastRoll() === 7) {
-      //roll love affair with problems
+      // roll love affair with problems
       lifeEvent.addRoll(this.d10.roll());
     }
     return lifeEvent;

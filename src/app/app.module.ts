@@ -15,9 +15,9 @@ import { InProgressComponent } from './tmp/in-progress/in-progress.component';
 import { NameComponent } from './character/name/name.component';
 import { CharacteristicsComponent } from './character/characteristics/characteristics.component';
 import { SkillsComponent } from './character/skills/skills.component';
+import { CharacterComponent } from './character/character.component';
 /**background*/
 import { BackgroundComponent } from './character/background/background.component';
-import { CharacterComponent } from './character/character.component';
 import { DressComponent } from './character/background/dress/dress.component';
 import { EthnicComponent } from './character/background/ethnic/ethnic.component';
 import { MotivationComponent } from './character/background/motivation/motivation.component';
@@ -33,8 +33,8 @@ import { EventsComponent } from './character/background/events/events.component'
     NameComponent,
     CharacteristicsComponent,
     SkillsComponent,
-    BackgroundComponent,
     CharacterComponent,
+    BackgroundComponent,
     DressComponent,
     EthnicComponent,
     MotivationComponent,

@@ -13,6 +13,13 @@ export class LifeEventsResolver {
     return false;
   }
 
+  isLuckEvent(event: LifeEvent) {
+    if (this.isProblemsWinsEvent(event)) {
+      return event.getRoll(0) % 2 === 0;
+    }
+    return false;
+  }
+
   isFriendsEnemiesEvent(event: LifeEvent) {
     return event.type === LifeEventType.friendsEnemies;
   }

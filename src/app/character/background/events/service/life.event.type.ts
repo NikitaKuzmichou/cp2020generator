@@ -1,6 +1,6 @@
 export enum LifeEventType {
-  problemsWins,
-  friendsEnemies,
-  romantic,
-  nothing
+  problemsWins = 'Big problems big wins',
+  friendsEnemies = 'New friend / enemy',
+  romantic = 'Romantic',
+  nothing = 'Nothing happened'
 }
