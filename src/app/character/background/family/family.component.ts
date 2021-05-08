@@ -20,9 +20,7 @@ export class FamilyComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.isGenerated = false;
     this.service = new FamilyService();
-    this.rolls = null;
   }
 
   onGenerate() {

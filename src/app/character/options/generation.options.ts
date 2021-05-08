@@ -17,7 +17,9 @@ export class GenerationOptions {
   }
 
   hasActiveOption() {
-    return this.nameOptions.selected || this.characteristicOptions.selected
-           || this.backgroundOptions.hasActiveOption() || this.skillsOptions.selected;
+    return this.nameOptions.selected
+      || this.characteristicOptions.selected
+      || this.backgroundOptions.hasActiveOption()
+      || this.skillsOptions.selected;
   }
 }

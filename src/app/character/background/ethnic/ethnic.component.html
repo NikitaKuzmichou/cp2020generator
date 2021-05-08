@@ -7,9 +7,11 @@
       <div class="col bg__h_1">{{localization.getLanguages()}}</div>
     </div>
     <div class="row align-content-center">
-      <div class="col bg__col">{{getEthnicOrigin()}}</div>
       <div class="col bg__col">
-        <div *ngFor="let language of getEthnicLanguages()">{{language}};&nbsp;</div>
+        {{getEthnicOrigin()}}
+      </div>
+      <div class="col bg__col">
+        <div *ngFor="let language of getEthnicLanguages()">{{language}}</div>
       </div>
     </div>
   </div>

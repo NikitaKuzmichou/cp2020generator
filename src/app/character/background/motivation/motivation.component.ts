@@ -23,14 +23,10 @@ export class MotivationComponent implements OnInit {
 
   ngOnInit(): void {
     this.d10 = new DiceD10();
-    this.roll = null;
-    this.isGenerated = false;
     if (this.generateAfterCreation) {
       this.onGenerate();
     }
   }
-
-
 
   onGenerate() {
     if (this.selected) {

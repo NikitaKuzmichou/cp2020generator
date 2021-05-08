@@ -45,7 +45,6 @@ export class EventsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.isGenerated = false;
     this.service = new LifeEventsService();
     this.resolver = new LifeEventsResolver();
   }

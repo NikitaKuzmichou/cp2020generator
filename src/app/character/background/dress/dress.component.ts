@@ -24,9 +24,7 @@ export class DressComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isGenerated = false;
     this.d10 = new DiceD10();
-    this.roll = null;
     if (this.generateAfterCreation) {
       this.onGenerate();
     }

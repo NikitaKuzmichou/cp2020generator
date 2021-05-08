@@ -24,7 +24,6 @@ export class CharacteristicsComponent implements OnInit {
   ngOnInit(): void {
     this.generator = new CharacteristicsGenerator();
     this.characteristics = new Characteristics();
-    this.isGenerated = false;
   }
 
   onGenerate() {

@@ -12,7 +12,10 @@ export class BackgroundOptions {
   }
 
   hasActiveOption() {
-    return this.dress || this.ethnic || this.motivation || this.family
-           || this.events.selected;
+    return this.dress
+      || this.ethnic
+      || this.motivation
+      || this.family
+      || this.events.selected;
   }
 }

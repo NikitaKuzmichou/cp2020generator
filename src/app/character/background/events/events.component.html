@@ -4,19 +4,24 @@
     <div class="bg__h">
       {{localization.getHeader()}}
     </div>
+
     <div class="row justify-content-center">
       <div class="col-1 bg__h_1">{{localization.getAge()}}</div>
       <div class="col bg__col">{{localization.getDescription()}}</div>
     </div>
+
     <div *ngFor="let event of events">
       <div class="row events__year justify-content-center">
         {{localization.getAnotherYear()}}
       </div>
+
       <div class="row ">
         <div class="col-1 bg__h_1">{{event.age}}</div>
         <div class="col">
+
           <!--Big wins big problems-->
           <span class="problems_wins" *ngIf="resolver.isProblemsWinsEvent(event)">
+
             <!--Disaster-->
             <span *ngIf="resolver.isDisasterEvent(event)">
               <div class="row">
@@ -32,6 +37,7 @@
                 </div>
               </div>
             </span>
+
             <!--Lucky-->
             <span *ngIf="resolver.isLuckEvent(event)">
               <div class="row bg__h_1 justify-content-center каво">
@@ -42,6 +48,7 @@
               </div>
             </span>
           </span>
+
           <!--Friends and enemies-->
           <span class="friends_enemies"*ngIf="resolver.isFriendsEnemiesEvent(event)">
             <div class="row bg__h_1 justify-content-center">
@@ -128,17 +135,20 @@
               </div>
             </div>
           </span>
+
           <!--Romantic life-->
           <span *ngIf="resolver.isRomanticEvent(event)">
             <div class="row bg__h_1 justify-content-center">
               {{romanticLocalization.getHeader()}}
             </div>
+
             <div class="row">
               <div class="col bg__h_1">{{romanticLocalization.getHowWorked()}}</div>
               <div class="col bg__col">
                 {{romanticLocalization.getHowWorkedByRoll(event.getRoll(0))}}
               </div>
             </div>
+
             <div class="row" *ngIf="options.detailedGeneration">
               <div class="col bg__h_1">{{romanticLocalization.getGeneratedPerson()}}</div>
               <div class="col bg__col">
@@ -156,6 +166,7 @@
                 </app-motivation>
               </div>
             </div>
+
             <!--Tragic love-->
             <span *ngIf="resolver.isTragicLove(event)">
               <div class="row justify-content-center">
@@ -171,6 +182,7 @@
                 </div>
               </div>
             </span>
+
             <!--Love affairs with problems-->
             <span *ngIf="resolver.isLoveAffair(event)">
               <div class="row justify-content-center">
@@ -181,6 +193,7 @@
               </div>
             </span>
           </span>
+
           <!--Nothing happened that year-->
           <span *ngIf="resolver.isNothingHappenedEvent(event)">
             <div class="row bg__h_1 justify-content-center">
@@ -189,7 +202,9 @@
           </span>
         </div>
       </div>
+
     </div>
+
   </div>
 
   <div class="row row-cols-1 justify-content-end">

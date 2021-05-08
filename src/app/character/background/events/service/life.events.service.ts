@@ -31,38 +31,40 @@ export class LifeEventsService {
     if (options.randomAge) {
       options.age = this.generateAge();
     }
+
     let roll;
     let eventDate = 17;
     const events = new Array<LifeEvent>();
+
     while (eventDate <= options.age) {
       roll = this.d10.roll();
+
       switch (roll) {
         case 1:
         case 2:
           events.push(this.problemsWins.generateProblemsWinsEvent(eventDate));
-          ++eventDate;
           break;
         case 3:
         case 4:
         case 5:
         case 6:
           events.push(this.friendsEnemies.generateFriendsEnemies(eventDate));
-          ++eventDate;
           break;
         case 7:
         case 8:
           events.push(this.romantic.generateRomantic(eventDate));
-          ++eventDate;
           break;
         case 9:
         case 10:
           if (!options.preventNothingHappenedEvents) {
             events.push(this.nothing.generateNothing(eventDate));
-            ++eventDate;
           }
           break;
       }
+
+      ++eventDate;
     }
+
     return events;
   }
 

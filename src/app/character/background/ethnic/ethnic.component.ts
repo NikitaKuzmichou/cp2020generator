@@ -21,9 +21,7 @@ export class EthnicComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.isGenerated = false;
     this.d10 = new DiceD10();
-    this.roll = null;
   }
 
   onGenerate() {

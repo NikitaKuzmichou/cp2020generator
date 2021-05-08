@@ -7,7 +7,7 @@ export class FamilyService {
   private rolls: FamilyRolls;
   private dice: Dice;
 
-   constructor() {
+  constructor() {
     this.rolls = new FamilyRolls();
     this.dice = new DiceD10();
   }
@@ -15,29 +15,34 @@ export class FamilyService {
   generateRolls(): FamilyRolls {
     this.rolls.ranking = this.dice.roll();
     this.rolls.parents = this.dice.roll();
+    this.rolls.status = this.dice.roll();
+    this.rolls.childEnv = this.dice.roll();
+    this.rolls.siblings = this.generateSiblings(this.dice.roll());
+
     if (this.rolls.parents > 6) {
       this.rolls.somethingHappened = this.dice.roll();
     }
-    this.rolls.status = this.dice.roll();
+
     if (this.rolls.status > 6) {
       this.rolls.tragedy = this.dice.roll();
     }
-    this.rolls.childEnv = this.dice.roll();
-    this.rolls.siblings = this.generateSiblings(this.dice.roll());
+
     return this.rolls;
   }
 
   private generateSiblings(numSiblings: number): Array<SiblingRolls> {
-    let siblings = new Array<SiblingRolls> ();
+    const siblings = new Array<SiblingRolls>();
+
     if (numSiblings < 8) {
       while (numSiblings-- > 0) {
-        let sibling = new SiblingRolls();
+        const sibling = new SiblingRolls();
         sibling.age = this.dice.roll();
         sibling.feelings = this.dice.roll();
         sibling.gender = this.dice.roll();
         siblings.push(sibling);
       }
     }
+
     return siblings;
   }
 }

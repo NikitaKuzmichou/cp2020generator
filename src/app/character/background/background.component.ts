@@ -46,11 +46,9 @@ export class BackgroundComponent implements OnInit {
   private motivation;
   isGenerated: boolean;
 
-  /**TODO*/
   constructor() { }
 
   ngOnInit(): void {
-    this.isGenerated = false;
   }
 
   onGenerate() {
