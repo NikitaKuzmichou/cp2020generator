@@ -1,1 +1,14 @@
-<app-in-progress></app-in-progress>
+<div class="container name text-center" [hidden]="!(isGenerated && options.isEnabled())">
+  <div class="row justify-content-center text name__h">
+    <div class="col">{{this.localization.getNameHeader()}}</div>
+    <div class="col">{{this.name}}</div>
+  </div>
+
+  <div class="row justify-content-end">
+    <div class="btn btn__tr">
+      <button class="col btn__content btn__content__tr text" (click)="onGenerate()">
+        {{btnLocalization.getGenerate()}}
+      </button>
+    </div>
+  </div>
+</div>

@@ -17,5 +17,4 @@ export class ButtonsLocalizationRu implements ButtonsLocalization {
   getLanguage() {
     return AppLanguage.RUSSIAN;
   }
-
 }

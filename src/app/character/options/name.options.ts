@@ -1,10 +1,14 @@
-import { GenderOptions } from './gender.options';
+import {NamesGenerationOptions} from './names.generation.options';
 
 export class NameOptions {
-  gender: GenderOptions;
+  nameType: NamesGenerationOptions;
   selected: boolean;
 
   constructor() {
     this.selected = false;
+  }
+
+  isEnabled() {
+    return this.selected && this.nameType !== undefined;
   }
 }

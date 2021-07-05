@@ -12,8 +12,10 @@ import { RomanticEventsLocalizationRu } from '../../localization/character/backg
 import { ProblemsWinsEventsLocalizationRu } from '../../localization/character/background/events/problems-and-wins/problems.wins.events.ru';
 import { NothingHappenedEventsLocalizationRu } from '../../localization/character/background/events/nothing-happened/nothing.happened.events.ru';
 import { FriendsEnemiesEventsLocalizationRu } from '../../localization/character/background/events/friends-and-enemies/friends.enemies.events.ru';
+import { NameLocalizationRu } from '../../localization/character/name/name.ru';
 
 export class RuLocalizationFactory implements LocalizationFactory {
+
   getCharacterLocalization() {
     return new CharacterLocalizationRu();
   }
@@ -28,6 +30,10 @@ export class RuLocalizationFactory implements LocalizationFactory {
 
   getCharacteristicsLocalization() {
     return new CharacteristicsLocalizationRu();
+  }
+
+  getNameLocalization() {
+    return new NameLocalizationRu();
   }
 
   getCharacterEthnicLocalization() {

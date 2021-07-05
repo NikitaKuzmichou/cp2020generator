@@ -5,90 +5,106 @@
 
 <div class="options text-center">
   <span *ngIf="onShowOptions(); then showOptions else hideOptions"></span>
+
   <ng-template #showOptions>
     <div class="row">
       <div class="col btn btn__rounded">
-        <button class="btn_content__rounded btn__content text options__h"
-                (click)="changeOptionsState()">
+        <button class="btn_content__rounded btn__content text options__h" (click)="changeOptionsState()">
           {{localization.getOptionsHeader()}}
         </button>
         <i class="arrow__up"></i>
         <span class="btn__glitch"></span>
       </div>
     </div>
+
     <div class="row row-cols-2 gradient__row_1">
       <label class="col text" for="select-generate-name">
-          <input id="select-generate-name" type="checkbox"
-                 [(ngModel)]="options.nameOptions.selected" disabled>
-          {{localization.getName()}}
+        <input id="select-generate-name" class="text" type="checkbox" (click)="clickGenerateName()">
+        {{localization.getName()}}
       </label>
+
+      <label class="col text" for="select-generate-name-setting" [hidden]="!options.nameOptions.selected">
+        <select id="select-generate-name-setting" [(ngModel)]="options.nameOptions.nameType">
+          <option *ngFor="let nameOption of nameEnums" value="{{nameOption}}">
+            {{nameLocalization.getNameOption(nameOption)}}
+          </option>
+        </select>
+      </label>
+
       <label class="col text" for="select-generate-characteristics">
         <input id="select-generate-characteristics" type="checkbox"
                [(ngModel)]="options.characteristicOptions.selected">
         {{localization.getCharacteristics()}}
       </label>
     </div>
+
     <div class="row row-cols-2 gradient__row_2">
       <label class="col text" for="select-generate-ethnic">
         <input id="select-generate-ethnic" type="checkbox"
                [(ngModel)]="options.backgroundOptions.ethnic">
         {{localization.getEthnic()}}
       </label>
+
       <label class="col text" for="select-generate-family">
         <input id="select-generate-family" type="checkbox"
                [(ngModel)]="options.backgroundOptions.family">
         {{localization.getFamily()}}
       </label>
     </div>
+
     <div class="row row-cols-2 gradient__row_3">
       <label class="col text" for="select-generate-personal-style">
         <input id="select-generate-personal-style" type="checkbox"
                [(ngModel)]="options.backgroundOptions.dress">
         {{localization.getPersonalStyle()}}
       </label>
+
       <label class="col text" for="select-generate-motivation">
         <input id="select-generate-motivation" type="checkbox"
                [(ngModel)]="options.backgroundOptions.motivation">
         {{localization.getMotivation()}}
       </label>
     </div>
+
     <div class="row row-cols-2 gradient__row_4">
       <label class="col text" for="select-generate-detailed-generation">
         <input id="select-generate-detailed-generation" type="checkbox"
                [(ngModel)]="options.backgroundOptions.events.detailedGeneration">
         {{localization.getDetailedGeneration()}}
       </label>
+
       <label class="col text" for="select-generate-nothing-happened">
         <input id="select-generate-nothing-happened" type="checkbox"
                [(ngModel)]="options.backgroundOptions.events.preventNothingHappenedEvents">
         {{localization.getNothingHappened()}}
       </label>
     </div>
+
     <div class="row row-cols-2 justify-content-center gradient__row_5">
       <label class="col text" for="select-generate-random-age">
-        <input id="select-generate-random-age" type="checkbox"
-               [(ngModel)]="options.backgroundOptions.events.randomAge">
+        <input id="select-generate-random-age" type="checkbox" [(ngModel)]="options.backgroundOptions.events.randomAge">
         {{localization.getRandomAge()}}
       </label>
+
       <div class="col text" [hidden]="options.backgroundOptions.events.randomAge">
-        <input type="number" [min]="16" [max]="74"
-               [(ngModel)]="options.backgroundOptions.events.age">
+        <input type="number" [min]="16" [max]="74" [(ngModel)]="options.backgroundOptions.events.age">
         {{localization.getAge()}}
       </div>
     </div>
+
     <div class="row row-cols-1 gradient__row_6">
       <label class="col text" for="select-generate-skills">
-        <input id="select-generate-skills" type="checkbox"
-               [(ngModel)]="options.skillsOptions.selected" disabled>
+        <input id="select-generate-skills" type="checkbox" [(ngModel)]="options.skillsOptions.selected" disabled>
         {{localization.getSkills()}}
       </label>
     </div>
+
   </ng-template>
+
   <ng-template #hideOptions>
     <div class="row">
       <div class="col btn btn__rounded">
-        <button class="btn_content__rounded btn__content text options__h"
-                (click)="changeOptionsState()">
+        <button class="btn_content__rounded btn__content text options__h" (click)="changeOptionsState()">
           {{btnLocalization.getShowOptions()}}
         </button>
         <i class="arrow__down"></i>
@@ -106,10 +122,17 @@
   </div>
 </div>
 
+<app-name [hidden]="!options.nameOptions.selected"
+          [localization]="appService.getLocalization().getNameLocalization()"
+          [options]="options.nameOptions"
+          [btnLocalization]="btnLocalization">>
+</app-name>
+
 <app-characteristics [hidden]="!options.characteristicOptions.selected"
                      [localization]="appService.getLocalization().getCharacteristicsLocalization()"
                      [options]="options.characteristicOptions"
-                     [btnLocalization]="btnLocalization"></app-characteristics>
+                     [btnLocalization]="btnLocalization">
+</app-characteristics>
 
 <app-background [hidden]="!options.backgroundOptions.hasActiveOption()"
                 [options]="options.backgroundOptions"

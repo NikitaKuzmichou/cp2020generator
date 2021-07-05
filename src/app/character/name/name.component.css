@@ -1,0 +1,48 @@
+@import "../../app.component.css";
+
+.name {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: var(--blue-color);
+}
+
+.btn {
+  background-color: #AD18C9;
+  border-color: var(--red-color);
+}
+
+.btn__content {
+  width: 100%;
+}
+
+.btn__content:hover {
+  background-color: #BB39C9;
+}
+
+.btn__rounded {
+  border-radius: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn_content__rounded {
+  width: 100%;
+  border-radius: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn__tr {
+  background-color: #AD18C9;
+  border-color: var(--red-color);
+  padding: 10px;
+}
+
+.btn__content__tr {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--white-color);
+}
+
+.btn__content__tr:hover {
+  background-color: #BB39C9;
+}

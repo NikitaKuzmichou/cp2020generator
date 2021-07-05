@@ -12,8 +12,10 @@ import { NothingHappenedEventsLocalizationEn } from '../../localization/characte
 import { ProblemsWinsEventsLocalizationEn } from '../../localization/character/background/events/problems-and-wins/problems.wins.events.en';
 import { RomanticEventsLocalizationEn } from '../../localization/character/background/events/romantic/romantic.events.en';
 import { EventsLocalizationEn } from '../../localization/character/background/events/events.en';
+import { NameLocalizationEn } from '../../localization/character/name/name.en';
 
 export class EnLocalizationFactory implements LocalizationFactory {
+
   getCharacterLocalization() {
     return new CharacterLocalizationEn();
   }
@@ -28,6 +30,10 @@ export class EnLocalizationFactory implements LocalizationFactory {
 
   getCharacteristicsLocalization() {
     return new CharacteristicsLocalizationEn();
+  }
+
+  getNameLocalization() {
+    return new NameLocalizationEn();
   }
 
   getCharacterEthnicLocalization() {
