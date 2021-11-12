@@ -11,12 +11,17 @@ import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 
 import { InProgressComponent } from './tmp/in-progress/in-progress.component';
-/**character components*/
+/**
+ * character components
+ */
 import { NameComponent } from './character/name/name.component';
 import { CharacteristicsComponent } from './character/characteristics/characteristics.component';
 import { SkillsComponent } from './character/skills/skills.component';
 import { CharacterComponent } from './character/character.component';
-/**background*/
+
+/**
+ * background components
+ */
 import { BackgroundComponent } from './character/background/background.component';
 import { DressComponent } from './character/background/dress/dress.component';
 import { EthnicComponent } from './character/background/ethnic/ethnic.component';
