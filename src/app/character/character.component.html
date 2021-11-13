@@ -18,18 +18,20 @@
     </div>
 
     <div class="row row-cols-2 gradient__row_1">
+      <!--      TODO DISABLED until figure out hot to fix CORS policy problem-->
       <label class="col text" for="select-generate-name">
-        <input id="select-generate-name" class="text" type="checkbox" (click)="clickGenerateName()">
+        <input id="select-generate-name" class="text" type="checkbox" disabled>
+        <!--        <input id="select-generate-name" class="text" type="checkbox" (click)="clickGenerateName()">-->
         {{localization.getName()}}
       </label>
 
-      <label class="col text" for="select-generate-name-setting" [hidden]="!options.nameOptions.selected">
-        <select id="select-generate-name-setting" [(ngModel)]="options.nameOptions.nameType">
-          <option *ngFor="let nameOption of nameEnums" value="{{nameOption}}">
-            {{nameLocalization.getNameOption(nameOption)}}
-          </option>
-        </select>
-      </label>
+      <!--      <label class="col text" for="select-generate-name-setting" [hidden]="!options.nameOptions.selected">-->
+      <!--        <select id="select-generate-name-setting" [(ngModel)]="options.nameOptions.nameType">-->
+      <!--          <option *ngFor="let nameOption of nameEnums" value="{{nameOption}}">-->
+      <!--            {{nameLocalization.getNameOption(nameOption)}}-->
+      <!--          </option>-->
+      <!--        </select>-->
+      <!--      </label>-->
 
       <label class="col text" for="select-generate-characteristics">
         <input id="select-generate-characteristics" type="checkbox"
